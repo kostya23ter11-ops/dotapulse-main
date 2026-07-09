@@ -1,0 +1,31 @@
+---
+pid: 18584
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "cd \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; npm.cmd run build"
+started_at: 2026-07-05T17:06:55.322Z
+running_for_ms: 224992   
+---
+
+> dota-pulse@0.1.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/layout.js:7:18
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   5 | import ClientProviders from "./ClientProviders";
+   6 |
+>  7 | const Sparkles = dynamic(() => import("./components/Sparkles/Sparkles"), { ssr: false });
+     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | const montserrat = Montserrat({
+  10 |   variable: "--font-montserrat",
+
+Ecmascript file had an error
+
+
+    at <unknown> (./app/layout.js:7:18)

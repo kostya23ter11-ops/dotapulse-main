@@ -1,0 +1,19 @@
+---
+pid: 8612
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "cd \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; npm.cmd exec vercel -- login"
+started_at: 2026-07-05T19:00:53.031Z
+running_for_ms: 4964991  
+---
+Vercel CLI 54.20.1 (Node.js 24.18.0)
+> 
+  Visit https://vercel.com/oauth/device?user_code=WKVR-WWGW
+
+Waiting for authentication...
+
+  Congratulations! You are now signed in.
+
+  To deploy something, run `vercel`.
+
+  💡 To deploy every commit automatically,
+  connect a Git Repository (vercel.link/git (https://vercel.link/git)).

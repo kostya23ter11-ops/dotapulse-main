@@ -1,0 +1,7 @@
+---
+pid: 15096
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "ping -n 30 127.0.0.1 > $null"
+started_at: 2026-07-05T17:46:56.841Z
+running_for_ms: 235012   
+---

@@ -1,0 +1,33 @@
+---
+pid: 23088
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "Set-Location \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; node scripts/setup-env.mjs --vercel"
+started_at: 2026-07-05T19:14:23.176Z
+running_for_ms: 4155005  
+---
+.env.local already exists — updating generated secrets only.
+
+Local .env.local ready.
+  AUTH_SECRET      = UC90FVWK… (64 chars)
+  CRON_SECRET      = MybexSyA…
+  NEXT_PUBLIC_BASE_URL = http://localhost:3000
+
+Fill manually in .env.local:
+  STEAM_API_KEY  → https://steamcommunity.com/dev/apikey
+  GROQ_API_KEY   → https://console.groq.com/keys
+  KV_*           → Vercel Dashboard → Storage → KV (optional)
+
+Pushing to Vercel (dotapulse-main)…
+Vercel: AUTH_SECRET → production
+Vercel: AUTH_SECRET → preview
+Vercel: AUTH_SECRET → development
+Vercel: CRON_SECRET → production
+Vercel: CRON_SECRET → preview
+Vercel: CRON_SECRET → development
+Vercel: NEXT_PUBLIC_BASE_URL → production
+Vercel: NEXT_PUBLIC_BASE_URL → preview
+Vercel: NEXT_PUBLIC_BASE_URL → development
+
+Done. Production URL: https://dotapulse-main.vercel.app
+Add STEAM_API_KEY and GROQ_API_KEY in Vercel → Settings → Environment Variables.
+Then redeploy: npm run deploy

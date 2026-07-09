@@ -1,0 +1,26 @@
+---
+pid: 16080
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "Set-Location \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; node scripts/migrate-env-from-dotapulse.mjs"
+started_at: 2026-07-05T19:26:13.009Z
+running_for_ms: 3445009  
+---
+Linked to dotapulse-main
+
+Missing values in pulled files: GROQ_API_KEY, CRON_SECRET
+Sensitive vars may be hidden — add them manually in Vercel dashboard.
+✓ AUTH_SECRET → dotapulse-main / production
+✓ AUTH_SECRET → dotapulse-main / preview
+✓ AUTH_SECRET → dotapulse-main / development
+✓ STEAM_API_KEY → dotapulse-main / production
+✓ STEAM_API_KEY → dotapulse-main / preview
+✓ STEAM_API_KEY → dotapulse-main / development
+△ skip GROQ_API_KEY (empty in source pull)
+△ skip CRON_SECRET (empty in source pull)
+✓ NEXT_PUBLIC_BASE_URL → dotapulse-main / production
+✓ NEXT_PUBLIC_BASE_URL → dotapulse-main / preview
+✓ NEXT_PUBLIC_BASE_URL → dotapulse-main / development
+
+✓ .env.local updated (keys copied, BASE_URL kept as localhost)
+
+Done. Run: npm run deploy

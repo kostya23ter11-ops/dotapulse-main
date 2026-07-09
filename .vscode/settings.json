@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.port": 5502,
+  "json.schemaDownload.enable": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["tsconfig.json", "tsconfig.*.json"],
+      "url": "./tsconfig.schema.json"
+    }
+  ]
+}

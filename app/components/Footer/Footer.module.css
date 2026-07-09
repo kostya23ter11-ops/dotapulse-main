@@ -1,0 +1,123 @@
+.footer {
+  background-color: #050505;
+  padding: 60px 0 30px;
+  border-top: 1px solid #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.logoText {
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.logoText span {
+  color: #ff4c4c;
+  margin-left: 4px;
+}
+
+.description {
+  color: #888;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.links h4, .social h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #888;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #ff4c4c;
+  padding-left: 5px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #161616;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socialIcons a:hover {
+  background: #ff4c4c;
+  transform: translateY(-3px);
+}
+
+.footerBottom {
+  padding-top: 30px;
+  border-top: 1px solid #1a1a1a;
+  text-align: center;
+  color: #444;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .links li {
+    margin-bottom: 0;
+  }
+}

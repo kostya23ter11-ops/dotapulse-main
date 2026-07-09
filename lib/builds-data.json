@@ -1,0 +1,1212 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Anti-Mage",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.3,
+        "pickrate": 78,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_slippers_of_circlet"],
+        "early_items": ["item_power_treads", "item_magic_wand"],
+        "mid_items": ["item_battlefury", "item_manta_style"],
+        "late_items": ["item_abyssal_blade", "item_heart_of_tarrasque", "item_butterfly"],
+        "situational_items": ["item_satanic", "item_nullifier"],
+        "neutral_item": "item_tiara_of_elegance",
+        "ability_build": [2,1,2,1,2,4,2,1,1,4,1,4,4,3,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+15 Agility", "20": "+2s Mana Void Duration", "25": "-35s Blink Cooldown" }
+      }
+    ]
+  },
+  "2": {
+    "id": 2,
+    "name": "Axe",
+    "lane": "Offlane",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Offlane",
+        "winrate": 51.8,
+        "pickrate": 85,
+        "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_branches", "item_branches"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"],
+        "mid_items": ["item_blade_mail", "item_blink"],
+        "late_items": ["item_black_king_bar", "item_shivas_guard", "item_heart_of_tarrasque"],
+        "situational_items": ["item_lotus_orb", "item_aghanims_scepter"],
+        "neutral_item": "item_occult_bracelet",
+        "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+25 Attack Speed", "15": "+12% Culling Blade Speed", "20": "+50 Berserker's Call Armor", "25": "+80 Culling Blade Damage" }
+      }
+    ]
+  },
+  "5": {
+    "id": 5,
+    "name": "Crystal Maiden",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Support",
+        "winrate": 53.1,
+        "pickrate": 90,
+        "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_iron_branch"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_ancient_janggo"],
+        "mid_items": ["item_glimmer_cape", "item_force_staff"],
+        "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"],
+        "situational_items": ["item_aether_lens", "item_blink"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [2,3,2,1,2,4,2,1,1,1,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+20 Movement Speed", "15": "+2s Crystal Nova Slow", "20": "+25% Magic Resistance", "25": "-75s Freezing Field Cooldown" }
+      }
+    ]
+  },
+  "6": {
+    "id": 6,
+    "name": "Drow Ranger",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.7,
+        "pickrate": 72,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_power_treads", "item_wraith_band"],
+        "mid_items": ["item_maelstrom", "item_blink"],
+        "late_items": ["item_dragon_lance", "item_butterfly", "item_greater_crit"],
+        "situational_items": ["item_satanic", "item_nullifier", "item_black_king_bar"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [1,3,1,3,1,4,1,3,3,3,4,2,2,2,2,4,4,4],
+        "talents": { "10": "+20 Damage", "15": "+15 Agility", "20": "+30% Multishot Damage", "25": "-5s Gust Cooldown" }
+      }
+    ]
+  },
+  "8": {
+    "id": 8,
+    "name": "Juggernaut",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 51.9,
+        "pickrate": 80,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_phase_boots", "item_magic_wand", "item_yasha"],
+        "mid_items": ["item_manta_style", "item_abyssal_blade"],
+        "late_items": ["item_butterfly", "item_satanic", "item_diffusal_blade"],
+        "situational_items": ["item_aghanims_scepter", "item_nullifier"],
+        "neutral_item": "item_occult_bracelet",
+        "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+25 Attack Speed", "15": "+20 Blade Fury DPS", "20": "+3s Blade Fury Duration", "25": "+180 Healing Ward Heal" }
+      }
+    ]
+  },
+  "11": {
+    "id": 11,
+    "name": "Shadow Fiend",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [
+      {
+        "name": "Standard Mid",
+        "winrate": 50.8,
+        "pickrate": 82,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"],
+        "mid_items": ["item_dragon_lance", "item_blink"],
+        "late_items": ["item_black_king_bar", "item_butterfly", "item_desolator"],
+        "situational_items": ["item_satanic", "item_aghanims_scepter", "item_refresher"],
+        "neutral_item": "item_broom_handle",
+        "ability_build": [1,2,1,2,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+2 Souls per Kill", "20": "+3s Requiem Fear", "25": "-30s Requiem Cooldown" }
+      }
+    ]
+  },
+  "14": {
+    "id": 14,
+    "name": "Pudge",
+    "lane": "Soft Support / Offlane",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Support",
+        "winrate": 52.5,
+        "pickrate": 60,
+        "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_branches"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_veil_of_discord"],
+        "mid_items": ["item_blink", "item_aghanims_scepter"],
+        "late_items": ["item_shivas_guard", "item_heart_of_tarrasque", "item_refresher"],
+        "situational_items": ["item_Blade_Mail", "item_aether_lens"],
+        "neutral_item": "item_occult_bracelet",
+        "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+15% Magic Resistance", "15": "+120 Rot DPS", "20": "+75 Damage", "25": "+1s Dismember Duration" }
+      },
+      {
+        "name": "Core Offlane",
+        "winrate": 51.2,
+        "pickrate": 35,
+        "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"],
+        "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"],
+        "mid_items": ["item_blink", "item_Blade_Mail"],
+        "late_items": ["item_aghanims_scepter", "item_heart_of_tarrasque", "item_shivas_guard"],
+        "situational_items": ["item_refresher", "item_black_king_bar"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+30 Damage", "15": "+120 Rot DPS", "20": "+4s Rot Slow", "25": "+1s Dismember Duration" }
+      }
+    ]
+  },
+  "21": {
+    "id": 21,
+    "name": "Windranger",
+    "lane": "Mid / Soft Support",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Mid/Core",
+        "winrate": 52.1,
+        "pickrate": 70,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_maelstrom"],
+        "mid_items": ["item_aghanims_scepter", "item_blink"],
+        "late_items": ["item_butterfly", "item_daedalus", "item_desolator"],
+        "situational_items": ["item_abyssal_blade", "item_satanic"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+25 Attack Speed", "15": "+30 Powershot Damage", "20": "+1s Shackleshot Duration", "25": "+30% Focus Fire Evasion" }
+      }
+    ]
+  },
+  "25": {
+    "id": 25,
+    "name": "Lina",
+    "lane": "Mid Lane",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Standard Mid",
+        "winrate": 51.5,
+        "pickrate": 75,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"],
+        "mid_items": ["item_kaya", "item_blink"],
+        "late_items": ["item_aghanims_scepter", "item_ethereal_blade", "item_sheepstick"],
+        "situational_items": ["item_refresher", "item_bloodstone", "item_wind_waker"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+25 Damage", "15": "+10% Spell Amplification", "20": "+2s Dragon Slave Burn", "25": "-5s Light Strike Array Cooldown" }
+      }
+    ]
+  },
+  "26": {
+    "id": 26,
+    "name": "Lion",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Support",
+        "winrate": 52.8,
+        "pickrate": 88,
+        "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"],
+        "mid_items": ["item_glimmer_cape", "item_force_staff"],
+        "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"],
+        "situational_items": ["item_octarine_core", "item_ethereal_blade"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+200 Mana", "15": "+75 Damage", "20": "+200 Finger of Damage", "25": "-10s Finger of Death Cooldown" }
+      }
+    ]
+  },
+  "35": {
+    "id": 35,
+    "name": "Sniper",
+    "lane": "Safe Lane / Mid",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.0,
+        "pickrate": 82,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_power_treads", "item_wraith_band", "item_magic_wand"],
+        "mid_items": ["item_dragon_lance", "item_maelstrom"],
+        "late_items": ["item_butterfly", "item_greater_crit", "item_monkey_king_bar"],
+        "situational_items": ["item_satanic", "item_black_king_bar", "item_satanic"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+15 Agility", "20": "+100 Shrapnel DPS", "25": "+150 Attack Range" }
+      }
+    ]
+  },
+  "41": {
+    "id": 41,
+    "name": "Faceless Void",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 51.4,
+        "pickrate": 76,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_mask_of_madness"],
+        "mid_items": ["item_maelstrom", "item_blink"],
+        "late_items": ["item_aghanims_scepter", "item_butterfly", "item_refresher"],
+        "situational_items": ["item_satanic", "item_black_king_bar", "item_heart_of_tarrasque"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+3s Time Walk Duration Reverse", "20": "+50 Chronosphere AoE", "25": "+80 Time Lock Damage" }
+      }
+    ]
+  },
+  "44": {
+    "id": 44,
+    "name": "Phantom Assassin",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.6,
+        "pickrate": 80,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_phase_boots", "item_magic_wand", "item_wraith_band"],
+        "mid_items": ["item_desolator", "item_blink"],
+        "late_items": ["item_basher", "item_butterfly", "item_abyssal_blade"],
+        "situational_items": ["item_satanic", "item_black_king_bar", "item_nullifier"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+15% Coup de Grace Chance", "20": "+25 Agility", "25": "-5s Phantom Strike Cooldown" }
+      }
+    ]
+  },
+  "52": {
+    "id": 52,
+    "name": "Leshrac",
+    "lane": "Mid / Support",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Mid/Core",
+        "winrate": 51.7,
+        "pickrate": 65,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_bloodstone"],
+        "mid_items": ["item_kaya_and_sange", "item_blink"],
+        "late_items": ["item_octarine_core", "item_shivas_guard", "item_aghanims_scepter"],
+        "situational_items": ["item_refresher", "item_wind_waker", "item_black_king_bar"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+30 Damage", "15": "+2s Split Earth Stun", "20": "+50 Diabolic Edict Explosions", "25": "+50 Pulse Nova DPS" }
+      }
+    ]
+  },
+  "74": {
+    "id": 74,
+    "name": "Invoker",
+    "lane": "Mid Lane",
+    "difficulty": "Very Hard",
+    "builds": [
+      {
+        "name": "Quas-Wex",
+        "winrate": 50.5,
+        "pickrate": 55,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"],
+        "mid_items": ["item_aghanims_scepter", "item_blink"],
+        "late_items": ["item_refresher", "item_octarine_core", "item_sheepstick"],
+        "situational_items": ["item_black_king_bar", "item_satanic", "item_sheepstick"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [3,2,1,3,2,4,3,2,2,2,4,1,1,1,4,1,1,1],
+        "talents": { "10": "+8% Spell Lifesteal", "15": "+1s Tornado Lift", "20": "+40 Chaos Meteor DPS", "25": "-35s Invoke Cooldown" }
+      },
+      {
+        "name": "Quas-Exort",
+        "winrate": 51.0,
+        "pickrate": 40,
+        "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"],
+        "mid_items": ["item_aghanims_scepter", "item_blink"],
+        "late_items": ["item_refresher", "item_octarine_core", "item_sheepstick"],
+        "situational_items": ["item_black_king_bar", "item_satanic", "item_heart_of_tarrasque"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [1,3,1,2,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+8% Spell Lifesteal", "15": "+40 Chaos Meteor Damage", "20": "+3s Deafening Blast Disarm", "25": "-35s Invoke Cooldown" }
+      }
+    ]
+  },
+  "86": {
+    "id": 86,
+    "name": "Rubick",
+    "lane": "Soft Support",
+    "difficulty": "Hard",
+    "builds": [
+      {
+        "name": "Standard Support",
+        "winrate": 52.9,
+        "pickrate": 85,
+        "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"],
+        "mid_items": ["item_glimmer_cape", "item_force_staff"],
+        "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"],
+        "situational_items": ["item_ethereal_blade", "item_octarine_core"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [2,3,2,1,2,4,2,3,3,3,4,1,1,1,4,3,3,3],
+        "talents": { "10": "+100 Health", "15": "+30% Spell Amp", "20": "-4s Telekinesis Cooldown", "25": "+200 Cast Range" }
+      }
+    ]
+  },
+  "70": {
+    "id": 70,
+    "name": "Ursa",
+    "lane": "Safe Lane / Roshan",
+    "difficulty": "Medium",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.2,
+        "pickrate": 75,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_phase_boots", "item_magic_wand", "item_morbid_mask"],
+        "mid_items": ["item_diffusal_blade", "item_blink"],
+        "late_items": ["item_abyssal_blade", "item_satanic", "item_basher"],
+        "situational_items": ["item_aghanims_scepter", "item_nullifier", "item_desolator"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+1s Enrage Duration", "20": "+30 Fury Swipes Damage", "25": "+50% Uncontrollable Frenzy" }
+      }
+    ]
+  },
+  "18": {
+    "id": 18,
+    "name": "Sven",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 52.0,
+        "pickrate": 70,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire", "item_branches"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_mask_of_madness"],
+        "mid_items": ["item_echo_sabre", "item_blink"],
+        "late_items": ["item_black_king_bar", "item_butterfly", "item_greater_crit"],
+        "situational_items": ["item_satanic", "item_aghanims_scepter", "item_desolator"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+20 Damage", "15": "+3s Warcry Duration", "20": "+25 Strength", "25": "+8 Gods Strength Bonus Damage" }
+      }
+    ]
+  },
+  "7": {
+    "id": 7,
+    "name": "Earthshaker",
+    "lane": "Hard Support / Mid",
+    "difficulty": "Hard",
+    "builds": [
+      {
+        "name": "Support",
+        "winrate": 52.4,
+        "pickrate": 80,
+        "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"],
+        "mid_items": ["item_glimmer_cape", "item_force_staff"],
+        "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"],
+        "situational_items": ["item_ethereal_blade", "item_octarine_core"],
+        "neutral_item": "item_arcane_ring",
+        "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+100 Health", "15": "+40 Damage", "20": "+50 Fissure Range", "25": "+1s Echo Slam Stun" }
+      }
+    ]
+  },
+  "29": {
+    "id": 29,
+    "name": "Tidehunter",
+    "lane": "Offlane",
+    "difficulty": "Easy",
+    "builds": [
+      {
+        "name": "Standard Offlane",
+        "winrate": 51.6,
+        "pickrate": 82,
+        "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity", "item_branches"],
+        "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"],
+        "mid_items": ["item_blink", "item_mekansm"],
+        "late_items": ["item_guardian_greaves", "item_shivas_guard", "item_refresher"],
+        "situational_items": ["item_aghanims_scepter", "item_heart_of_tarrasque", "item_aghanims_shard"],
+        "neutral_item": "item_occult_bracelet",
+        "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3],
+        "talents": { "10": "+200 Health", "15": "+40 Anchor Smash Damage", "20": "+15 Ravage Stun", "25": "-40s Ravage Cooldown" }
+      }
+    ]
+  },
+  "93": {
+    "id": 93,
+    "name": "Slark",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [
+      {
+        "name": "Standard Carry",
+        "winrate": 51.8,
+        "pickrate": 74,
+        "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"],
+        "early_items": ["item_power_treads", "item_magic_wand", "item_diffusal_blade"],
+        "mid_items": ["item_basher", "item_blink"],
+        "late_items": ["item_abyssal_blade", "item_satanic", "item_butterfly"],
+        "situational_items": ["item_aghanims_scepter", "item_nullifier", "item_black_king_bar"],
+        "neutral_item": "item_possessed_mask",
+        "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3],
+        "talents": { "10": "+30 Damage", "15": "+1.5s Pounce Leash", "20": "+30 Agility", "25": "-25s Shadow Dance Cooldown" }
+      }
+    ]
+  },
+  "3": {
+    "id": 3,
+    "name": "Bane",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 65, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"], "situational_items": ["item_octarine_core", "item_aether_lens"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+75 Damage", "15": "+1s Fiend's Grip Duration", "20": "+200 Brain Sap Damage", "25": "-6s Nightmare Cooldown" } }]
+  },
+  "4": {
+    "id": 4,
+    "name": "Bloodseeker",
+    "lane": "Safe Lane / Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 70, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_basher", "item_butterfly", "item_abyssal_blade"], "situational_items": ["item_satanic", "item_black_king_bar", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Attack Speed", "15": "+6% Thirst Speed", "20": "+50 Blood Rite Damage", "25": "+1.2s Rupture Duration" } }]
+  },
+  "9": {
+    "id": 9,
+    "name": "Mirana",
+    "lane": "Soft Support / Mid",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Support", "winrate": 51.8, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_blink", "item_ethereal_blade"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Starstorm Damage", "20": "+1.5s Sacred Arrow Stun", "25": "-5s Leap Cooldown" } }]
+  },
+  "15": {
+    "id": 15,
+    "name": "Razor",
+    "lane": "Offlane / Mid",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.3, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_heart_of_tarrasque"], "situational_items": ["item_black_king_bar", "item_bloodstone"], "neutral_item": "item_occult_bracelet", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+15 Attack Speed", "15": "+80 Static Link Damage", "20": "+30 Plasma Field Damage", "25": "+250 Eye of the Storm Strikes" } }]
+  },
+  "16": {
+    "id": 16,
+    "name": "Sand King",
+    "lane": "Offlane / Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 52.1, "pickrate": 68, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_veil_of_discord", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_black_king_bar", "item_aether_lens"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+15% Magic Resistance", "15": "+50 Sand Storm DPS", "20": "+1.5s Burrowstrike Stun", "25": "-20s Epicenter Cooldown" } }]
+  },
+  "17": {
+    "id": 17,
+    "name": "Storm Spirit",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.0, "pickrate": 72, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_black_king_bar", "item_wind_waker", "item_bloodstone"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+15% Spell Lifesteal", "20": "+2s Electric Vortex", "25": "-25s Ball Lightning Cooldown" } }]
+  },
+  "19": {
+    "id": 19,
+    "name": "Tiny",
+    "lane": "Mid / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_echo_sabre"], "late_items": ["item_black_king_bar", "item_aghanims_scepter", "item_assault"], "situational_items": ["item_satanic", "item_refresher", "item_heart_of_tarrasque"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+150 Avalanche Damage", "20": "+2s Avalanche Stun", "25": "+100 Toss Damage" } }]
+  },
+  "20": {
+    "id": 20,
+    "name": "Vengeful Spirit",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.3, "pickrate": 70, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_force_staff", "item_aether_lens"], "situational_items": ["item_blink", "item_necronomicon"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+12% Vengeance Aura Damage", "20": "+2s Magic Missile Stun", "25": "+1s Nether Swap Duration" } }]
+  },
+  "22": {
+    "id": 22,
+    "name": "Zeus",
+    "lane": "Mid Lane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Mid", "winrate": 52.5, "pickrate": 75, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_wind_waker", "item_ethereal_blade", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+1s Lightning Bolt True Sight", "20": "+15% Arc Lightning Damage", "25": "-4s Lightning Bolt Cooldown" } }]
+  },
+  "23": {
+    "id": 23,
+    "name": "Kunkka",
+    "lane": "Mid / Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.8, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_phase_boots", "item_magic_wand", "item_bottle"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_black_king_bar", "item_refresher", "item_shivas_guard"], "situational_items": ["item_heart_of_tarrasque", "item_assault", "item_abyssal_blade"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1s Torrent Stun", "20": "+50 Ghostship Damage", "25": "+20% Tidebringer Cleave" } }]
+  },
+  "27": {
+    "id": 27,
+    "name": "Shadow Shaman",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.2, "pickrate": 72, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_blink"], "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"], "situational_items": ["item_force_staff", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+100 Shackles Damage", "20": "+2s Shackles Duration", "25": "-40s Mass Serpent Ward Cooldown" } }]
+  },
+  "28": {
+    "id": 28,
+    "name": "Slardar",
+    "lane": "Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.6, "pickrate": 65, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_desolator"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_aghanims_scepter", "item_black_king_bar", "item_heart_of_tarrasque"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1s Slithereen Crush Stun", "20": "+40 Bash Damage", "25": "+20% Corrosive Haze Armor Reduction" } }]
+  },
+  "30": {
+    "id": 30,
+    "name": "Witch Doctor",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.6, "pickrate": 78, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+10% Maledict DPS", "20": "+1.5s Cask Stun", "25": "+1s Death Ward Duration" } }]
+  },
+  "31": {
+    "id": 31,
+    "name": "Lich",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.4, "pickrate": 72, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+10 Frost Blast Damage", "20": "+2s Sinister Gaze Duration", "25": "-45s Chain Frost Cooldown" } }]
+  },
+  "32": {
+    "id": 32,
+    "name": "Riki",
+    "lane": "Soft Support / Carry",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Carry", "winrate": 51.0, "pickrate": 55, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand", "item_diffusal_blade"], "mid_items": ["item_aghanims_scepter", "item_basher"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_nullifier", "item_desolator", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1s Smoke Screen Silence", "20": "+20 Agility", "25": "-4s Blink Strike Cooldown" } }]
+  },
+  "33": {
+    "id": 33,
+    "name": "Enigma",
+    "lane": "Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_bkb", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_blink"], "neutral_item": "item_occult_bracelet", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+100 Health", "15": "+10% Midnight Pulse Damage", "20": "+1s Black Hole Duration", "25": "-70s Black Hole Cooldown" } }]
+  },
+  "34": {
+    "id": 34,
+    "name": "Tinker",
+    "lane": "Mid Lane",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 50.5, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_ethereal_blade", "item_wind_waker", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+8% Spell Amplification", "20": "+150 Laser Damage", "25": "-4s Rearm Cooldown" } }]
+  },
+  "36": {
+    "id": 36,
+    "name": "Necrophos",
+    "lane": "Mid / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.8, "pickrate": 62, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bloodstone"], "mid_items": ["item_kaya_and_sange", "item_blink"], "late_items": ["item_aghanims_scepter", "item_shivas_guard", "item_refresher"], "situational_items": ["item_black_king_bar", "item_octarine_core", "item_sheepstick"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8% Ghost Shroud Amplification", "20": "+1s Reaper's Scythe Stun", "25": "+60 Death Pulse Damage" } }]
+  },
+  "37": {
+    "id": 37,
+    "name": "Warlock",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 68, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_octarine_core", "item_ethereal_blade"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+2s Fatal Bonds Duration", "20": "+40 Shadow Ward DPS", "25": "-60s Chaotic Offering Cooldown" } }]
+  },
+  "38": {
+    "id": 38,
+    "name": "Beastmaster",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_shivas_guard", "item_heart_of_tarrasque"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Boar Damage", "20": "+2s Primal Roar Duration", "25": "-50s Primal Roar Cooldown" } }]
+  },
+  "39": {
+    "id": 39,
+    "name": "Queen of Pain",
+    "lane": "Mid Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 70, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_ethereal_blade", "item_wind_waker", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+3s Scream of Pain AoE", "20": "+40 Shadow Strike DPS", "25": "-30s Sonic Wave Cooldown" } }]
+  },
+  "40": {
+    "id": 40,
+    "name": "Venomancer",
+    "lane": "Offlane / Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.0, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_veil_of_discord", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_blink", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+40 Poison Nova Damage", "20": "+3s Gale Duration", "25": "+150 Plague Ward HP" } }]
+  },
+  "42": {
+    "id": 42,
+    "name": "Wraith King",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Carry", "winrate": 52.0, "pickrate": 72, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand", "item_mask_of_madness"], "mid_items": ["item_blink", "item_desolator"], "late_items": ["item_basher", "item_abyssal_blade", "item_butterfly"], "situational_items": ["item_satanic", "item_aghanims_scepter", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+15% Critical Chance", "20": "+4s Wraithfire Blast Stun", "25": "+140 Skeleton Damage" } }]
+  },
+  "43": {
+    "id": 43,
+    "name": "Death Prophet",
+    "lane": "Mid / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.2, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya_and_sange", "item_blink"], "late_items": ["item_aghanims_scepter", "item_shivas_guard", "item_refresher"], "situational_items": ["item_black_king_bar", "item_octarine_core", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+10% Spirit Siphon Damage", "20": "+50 Exorcism Spirits", "25": "+2s Silence Duration" } }]
+  },
+  "45": {
+    "id": 45,
+    "name": "Pugna",
+    "lane": "Mid / Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_ethereal_blade", "item_octarine_core", "item_wind_waker"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+15% Nether Blast Damage", "20": "+1s Decrepify Duration", "25": "+150 Life Drain DPS" } }]
+  },
+  "46": {
+    "id": 46,
+    "name": "Templar Assassin",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_basher", "item_abyssal_blade", "item_butterfly"], "situational_items": ["item_black_king_bar", "item_satanic", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+200 Psionic Trap Damage", "20": "+5 Refraction Charges", "25": "+2s Meld Strike Armor Reduction" } }]
+  },
+  "47": {
+    "id": 47,
+    "name": "Viper",
+    "lane": "Mid / Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.8, "pickrate": 68, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_kaya_and_sange", "item_blink"], "late_items": ["item_aghanims_scepter", "item_shivas_guard", "item_refresher"], "situational_items": ["item_black_king_bar", "item_sheepstick", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+15% Corrosive Skin Slow", "20": "+100 Nethertoxin Damage", "25": "+6s Viper Strike Duration" } }]
+  },
+  "48": {
+    "id": 48,
+    "name": "Luna",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Carry", "winrate": 52.0, "pickrate": 70, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand", "item_wraith_band"], "mid_items": ["item_maelstrom", "item_blink"], "late_items": ["item_butterfly", "item_black_king_bar", "item_greater_crit"], "situational_items": ["item_satanic", "item_aghanims_scepter", "item_manta_style"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+25 Moon Glaives Bounce", "20": "+40 Lucent Beam Damage", "25": "+10s Eclipse Duration" } }]
+  },
+  "49": {
+    "id": 49,
+    "name": "Dragon Knight",
+    "lane": "Mid / Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_black_king_bar", "item_assault", "item_refresher"], "situational_items": ["item_heart_of_tarrasque", "item_shivas_guard", "item_sheepstick"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+2s Dragon Tail Stun", "20": "+50 Breathe Fire Damage", "25": "+100 Dragon Blood HP Regen" } }]
+  },
+  "50": {
+    "id": 50,
+    "name": "Dazzle",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 70, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_aether_lens", "item_refresher"], "situational_items": ["item_octarine_core", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+50 Shadow Wave Damage", "20": "+2s Shallow Grave Duration", "25": "-4s Poison Touch Cooldown" } }]
+  },
+  "51": {
+    "id": 51,
+    "name": "Clockwerk",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.2, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_shivas_guard", "item_heart_of_tarrasque"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Battery Assault Damage", "20": "+2s Power Cogs Duration", "25": "-30s Hookshot Cooldown" } }]
+  },
+  "53": {
+    "id": 53,
+    "name": "Nature's Prophet",
+    "lane": "Offlane / Jungle",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.0, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_maelstrom", "item_blink"], "late_items": ["item_mjollnir", "item_desolator", "item_butterfly"], "situational_items": ["item_sheepstick", "item_satanic", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+3 Treant Health", "20": "+30% Sprout Damage", "25": "-25s Teleportation Cooldown" } }]
+  },
+  "54": {
+    "id": 54,
+    "name": "Lifestealer",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand", "item_armlet"], "mid_items": ["item_desolator", "item_basher"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_aghanims_scepter", "item_black_king_bar", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+5% Feast Lifesteal", "20": "+50 Rage Duration", "25": "+2s Open Wounds Slow" } }]
+  },
+  "55": {
+    "id": 55,
+    "name": "Dark Seer",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_black_king_bar", "item_aether_lens", "item_sheepstick"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+30 Surge Speed", "20": "+80 Ion Shell Damage", "25": "+2s Vacuum Stun" } }]
+  },
+  "56": {
+    "id": 56,
+    "name": "Clinkz",
+    "lane": "Safe Lane / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.0, "pickrate": 55, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_butterfly", "item_greater_crit", "item_basher"], "situational_items": ["item_satanic", "item_sheepstick", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+3s Searing Arrows Duration", "20": "+30% Strafe Attack Speed", "25": "-10s Skeleton Walk Cooldown" } }]
+  },
+  "57": {
+    "id": 57,
+    "name": "Omniknight",
+    "lane": "Soft Support / Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Support", "winrate": 51.8, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+100 Purification Damage", "20": "+2s Repel Duration", "25": "-60s Guardian Angel Cooldown" } }]
+  },
+  "58": {
+    "id": 58,
+    "name": "Enchantress",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_blink", "item_aether_lens"], "situational_items": ["item_force_staff", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+50 Impetus Damage", "20": "+2s Untouchable Slow", "25": "+6 Enchant Creeps" } }]
+  },
+  "59": {
+    "id": 59,
+    "name": "Huskar",
+    "lane": "Mid / Safe Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 52.0, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_phase_boots", "item_magic_wand", "item_armlet"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_aghanims_scepter", "item_black_king_bar", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+15% Berserker's Blood Attack Speed", "20": "+40 Burning Spear DPS", "25": "+1s Life Break Slow" } }]
+  },
+  "60": {
+    "id": 60,
+    "name": "Night Stalker",
+    "lane": "Offlane / Mid",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_abyssal_blade"], "situational_items": ["item_heart_of_tarrasque", "item_desolator", "item_satanic"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+3s Crippling Fear Duration", "20": "+60 Void Damage", "25": "+50 Hunter in the Night Speed" } }]
+  },
+  "61": {
+    "id": 61,
+    "name": "Broodmother",
+    "lane": "Mid / Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.0, "pickrate": 50, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_orchid", "item_bloodthorn"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_sheepstick", "item_nullifier", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8 Spiderling Health", "20": "+50 Spawn Spiderlings Damage", "25": "+6 Spiderlings Spawned" } }]
+  },
+  "62": {
+    "id": 62,
+    "name": "Bounty Hunter",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_abyssal_blade", "item_desolator"], "situational_items": ["item_blink", "item_solar_crest"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+15% Jinada Damage", "20": "+3s Shadow Walk Duration", "25": "+4 Track Bonus Gold" } }]
+  },
+  "63": {
+    "id": 63,
+    "name": "Weaver",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_desolator", "item_bloodthorn"], "late_items": ["item_butterfly", "item_abyssal_blade", "item_satanic"], "situational_items": ["item_sheepstick", "item_nullifier", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+3s Time Lapse Cooldown", "20": "+30% Geminate Attack Chance", "25": "-8s Shukuchi Cooldown" } }]
+  },
+  "64": {
+    "id": 64,
+    "name": "Jakiro",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 65, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+75 Dual Breath Damage", "20": "+2s Ice Path Stun", "25": "+150 Liquid Fire DPS" } }]
+  },
+  "65": {
+    "id": 65,
+    "name": "Batrider",
+    "lane": "Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_force_staff", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_black_king_bar", "item_aether_lens", "item_sheepstick"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+50 Firefly Damage", "20": "+3s Flaming Lasso Duration", "25": "-40s Flaming Lasso Cooldown" } }]
+  },
+  "67": {
+    "id": 67,
+    "name": "Spectre",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand", "item_radiance"], "mid_items": ["item_manta_style", "item_heart_of_tarrasque"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_aghanims_scepter", "item_desolator", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+15% Dispersion Damage", "20": "+2s Spectral Dagger Slow", "25": "-50s Haunt Cooldown" } }]
+  },
+  "68": {
+    "id": 68,
+    "name": "Ancient Apparition",
+    "lane": "Hard Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+2s Cold Feet Stun", "20": "+100 Ice Blast Damage", "25": "-40s Ice Blast Cooldown" } }]
+  },
+  "69": {
+    "id": 69,
+    "name": "Doom",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_heart_of_tarrasque", "item_shivas_guard", "item_sheepstick"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Devour Gold", "20": "+2s Doom Duration", "25": "+60 Scorched Earth Damage" } }]
+  },
+  "71": {
+    "id": 71,
+    "name": "Spirit Breaker",
+    "lane": "Offlane / Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_abyssal_blade"], "situational_items": ["item_heart_of_tarrasque", "item_desolator", "item_satanic"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+15% Greater Bash Chance", "20": "+40 Charge Damage", "25": "-40s Charge of Darkness Cooldown" } }]
+  },
+  "72": {
+    "id": 72,
+    "name": "Gyrocopter",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_maelstrom", "item_blink"], "late_items": ["item_butterfly", "item_black_king_bar", "item_greater_crit"], "situational_items": ["item_satanic", "item_aghanims_scepter", "item_manta_style"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+30 Rocket Barrage Damage", "20": "+1s Homing Missile Stun", "25": "+3 Call Down Waves" } }]
+  },
+  "73": {
+    "id": 73,
+    "name": "Alchemist",
+    "lane": "Safe Lane / Mid",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_phase_boots", "item_magic_wand", "item_armlet"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_black_king_bar", "item_heart_of_tarrasque", "item_desolator"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8% Chemical Rage Attack Speed", "20": "+3s Unstable Concoction Stun", "25": "+250 Health Regen" } }]
+  },
+  "75": {
+    "id": 75,
+    "name": "Silencer",
+    "lane": "Mid / Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Support", "winrate": 52.0, "pickrate": 65, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Arcane Curse Damage", "20": "+1.5s Last Word Duration", "25": "+2 Global Silence Duration" } }]
+  },
+  "76": {
+    "id": 76,
+    "name": "Outworld Destroyer",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_ethereal_blade", "item_wind_waker", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8% Arcane Orb Damage", "20": "+2s Astral Imprisonment", "25": "-25s Sanity's Eclipse Cooldown" } }]
+  },
+  "77": {
+    "id": 77,
+    "name": "Lycan",
+    "lane": "Offlane / Jungle",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_necronomicon", "item_desolator"], "late_items": ["item_assault", "item_abyssal_blade", "item_satanic"], "situational_items": ["item_black_king_bar", "item_heart_of_tarrasque", "item_basher"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Feral HP Regen", "20": "+300 Summon Wolves HP", "25": "+2s Shapeshift Duration" } }]
+  },
+  "78": {
+    "id": 78,
+    "name": "Brewmaster",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 52, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_shivas_guard", "item_heart_of_tarrasque", "item_basher"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+20 Cinder Brew Damage", "20": "+1.5s Thunder Clap Slow", "25": "+3s Drunken Brawler Duration" } }]
+  },
+  "79": {
+    "id": 79,
+    "name": "Shadow Demon",
+    "lane": "Soft Support",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+2s Disruption Duration", "20": "+50 Soul Catcher Damage", "25": "+5 Shadow Poison Stacks" } }]
+  },
+  "80": {
+    "id": 80,
+    "name": "Lone Druid",
+    "lane": "Safe Lane / Mid",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 50, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_desolator", "item_basher"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_butterfly", "item_heart_of_tarrasque", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+300 Spirit Bear HP", "20": "+50 Savage Roar Damage", "25": "-5s Savage Roar Cooldown" } }]
+  },
+  "81": {
+    "id": 81,
+    "name": "Chaos Knight",
+    "lane": "Safe Lane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Carry", "winrate": 52.0, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand", "item_armlet"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_abyssal_blade", "item_assault", "item_heart_of_tarrasque"], "situational_items": ["item_butterfly", "item_satanic", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1.5s Chaos Bolt Stun", "20": "+15% Chaos Strike Chance", "25": "+3 Phantasm Illusions" } }]
+  },
+  "84": {
+    "id": 84,
+    "name": "Ogre Magi",
+    "lane": "Hard Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.5, "pickrate": 72, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_blink", "item_aether_lens", "item_force_staff"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Fireblast Damage", "20": "+3s Ignite Slow", "25": "+2s Multicast Stun" } }]
+  },
+  "85": {
+    "id": 85,
+    "name": "Undying",
+    "lane": "Hard Support / Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 65, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+200 Health", "15": "+10 Decay Stacks", "20": "+2s Soul Rip Heal", "25": "+4 Tombstone Zombies" } }]
+  },
+  "87": {
+    "id": 87,
+    "name": "Disruptor",
+    "lane": "Hard Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 68, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+2s Kinetic Field Duration", "20": "+100 Thunder Strike Damage", "25": "-60s Static Storm Cooldown" } }]
+  },
+  "88": {
+    "id": 88,
+    "name": "Nyx Assassin",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_dagon", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_sheepstick", "item_force_staff", "item_aether_lens"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Impale Damage", "20": "+2s Vendetta Duration", "25": "-30s Vendetta Cooldown" } }]
+  },
+  "89": {
+    "id": 89,
+    "name": "Naga Siren",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_diffusal_blade", "item_manta_style"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_nullifier", "item_desolator", "item_sheepstick"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+15 Mirror Image Damage", "20": "+2s Ensnare Duration", "25": "+12 Mirror Image Count" } }]
+  },
+  "90": {
+    "id": 90,
+    "name": "Keeper of the Light",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+1s Blinding Light Blind", "20": "+50 Illuminate Damage", "25": "-40s Will-O-Wisp Cooldown" } }]
+  },
+  "91": {
+    "id": 91,
+    "name": "Io",
+    "lane": "Hard Support",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Support", "winrate": 52.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_solar_crest", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+15 Spirits Damage", "20": "+2s Tether Stun", "25": "+50% Overcharge Attack Speed" } }]
+  },
+  "92": {
+    "id": 92,
+    "name": "Visage",
+    "lane": "Mid / Support",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 50, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_assault", "item_abyssal_blade", "item_satanic"], "situational_items": ["item_aghanims_scepter", "item_sheepstick", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+60 Familiar Damage", "20": "+2s Grave Chill Slow", "25": "+2 Familiars" } }]
+  },
+  "94": {
+    "id": 94,
+    "name": "Medusa",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand", "item_wraith_band"], "mid_items": ["item_maelstrom", "item_manta_style"], "late_items": ["item_butterfly", "item_skadi", "item_satanic"], "situational_items": ["item_basher", "item_heart_of_tarrasque", "item_desolator"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+20% Split Shot Damage", "20": "+5 Mana Shield", "25": "-25s Stone Gaze Cooldown" } }]
+  },
+  "95": {
+    "id": 95,
+    "name": "Troll Warlord",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand", "item_mask_of_madness"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_basher", "item_aghanims_scepter", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1s Berserker's Rage Duration", "20": "+15% Fervor Attack Speed", "25": "+60 Whirling Axes Damage" } }]
+  },
+  "96": {
+    "id": 96,
+    "name": "Centaur Warrunner",
+    "lane": "Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_heart_of_tarrasque"], "situational_items": ["item_shivas_guard", "item_refresher", "item_abyssal_blade"], "neutral_item": "item_occult_bracelet", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Double Edge Damage", "20": "+2s Hoof Stomp Stun", "25": "+500 Stampede Damage" } }]
+  },
+  "97": {
+    "id": 97,
+    "name": "Magnus",
+    "lane": "Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_shivas_guard", "item_heart_of_tarrasque", "item_sheepstick"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+1s Reverse Polarity Stun", "20": "+50 Shockwave Damage", "25": "+30% Empower Damage" } }]
+  },
+  "98": {
+    "id": 98,
+    "name": "Timbersaw",
+    "lane": "Offlane / Mid",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_kaya_and_sange", "item_blink"], "late_items": ["item_aghanims_scepter", "item_shivas_guard", "item_refresher"], "situational_items": ["item_black_king_bar", "item_octarine_core", "item_sheepstick"], "neutral_item": "item_arcane_ring", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8% Reactive Armor Stack", "20": "+60 Whirling Death Damage", "25": "+3s Timber Chain Duration" } }]
+  },
+  "99": {
+    "id": 99,
+    "name": "Bristleback",
+    "lane": "Offlane",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Offlane", "winrate": 52.0, "pickrate": 72, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_heart_of_tarrasque", "item_satanic"], "situational_items": ["item_black_king_bar", "item_shivas_guard", "item_basher"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+10 Quill Spray Damage", "20": "+30% Bristleback Quill", "25": "-1s Goo Stack" } }]
+  },
+  "100": {
+    "id": 100,
+    "name": "Tusk",
+    "lane": "Soft Support / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_force_staff", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_solar_crest"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Snowball Damage", "20": "+1s Ice Shards Duration", "25": "-30s Snowball Cooldown" } }]
+  },
+  "101": {
+    "id": 101,
+    "name": "Skywrath Mage",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 68, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_ethereal_blade", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff", "item_sheepstick"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+60 Arcane Bolt Damage", "20": "+2s Ancient Seal Duration", "25": "-40s Mystic Flare Cooldown" } }]
+  },
+  "102": {
+    "id": 102,
+    "name": "Abaddon",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+50 Mist Coil Damage", "20": "+1.5s Aphotic Shield Duration", "25": "-30s Borrowed Time Cooldown" } }]
+  },
+  "103": {
+    "id": 103,
+    "name": "Elder Titan",
+    "lane": "Offlane / Support",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Support", "winrate": 51.5, "pickrate": 52, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+50 Astral Spirit Damage", "20": "+2s Echo Stomp Sleep", "25": "+4s Earth Splitter Slow" } }]
+  },
+  "104": {
+    "id": 104,
+    "name": "Legion Commander",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_armlet"], "mid_items": ["item_blink", "item_desolator"], "late_items": ["item_abyssal_blade", "item_assault", "item_satanic"], "situational_items": ["item_black_king_bar", "item_aghanims_scepter", "item_basher"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+50 Press the Attack Speed", "20": "+2s Duel Duration", "25": "+25% Moment Chance" } }]
+  },
+  "105": {
+    "id": 105,
+    "name": "Ember Spirit",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 65, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_basher", "item_butterfly", "item_abyssal_blade"], "situational_items": ["item_satanic", "item_sheepstick", "item_black_king_bar"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Flame Guard DPS", "20": "+1.5s Searing Chains Duration", "25": "+2 Fire Remnant Charges" } }]
+  },
+  "106": {
+    "id": 106,
+    "name": "Earth Spirit",
+    "lane": "Soft Support / Mid",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_blink"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_force_staff", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_solar_crest", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+30 Rolling Boulder Damage", "20": "+1.5s Boulder Smash Stun", "25": "-40s Magnetize Cooldown" } }]
+  },
+  "107": {
+    "id": 107,
+    "name": "Underlord",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_tranquil_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_shivas_guard", "item_heart_of_tarrasque", "item_refresher"], "situational_items": ["item_black_king_bar", "item_sheepstick", "item_octarine_core"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+25 Damage", "15": "+40 Firestorm Wave Damage", "20": "+30% Atrophy Aura", "25": "-50s Dark Rift Cooldown" } }]
+  },
+  "108": {
+    "id": 108,
+    "name": "Terrorblade",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_manta_style", "item_desolator"], "late_items": ["item_butterfly", "item_skadi", "item_satanic"], "situational_items": ["item_basher", "item_heart_of_tarrasque", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+3s Metamorphosis Duration", "20": "+25% Reflection Damage", "25": "+400 Conjure Image HP" } }]
+  },
+  "109": {
+    "id": 109,
+    "name": "Phoenix",
+    "lane": "Soft Support / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+50 Fire Spirits Damage", "20": "+2s Fire Spirits Duration", "25": "+3 Supernova Hit Count" } }]
+  },
+  "110": {
+    "id": 110,
+    "name": "Oracle",
+    "lane": "Hard Support",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+75 Purifying Flames Damage", "20": "+2s False Promise Duration", "25": "-4s Fortune's End Cooldown" } }]
+  },
+  "111": {
+    "id": 111,
+    "name": "Techies",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.0, "pickrate": 52, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Sticky Bomb Damage", "20": "+2s Blast Off Silence", "25": "+250 Minefield Sign HP" } }]
+  },
+  "112": {
+    "id": 112,
+    "name": "Winter Wyvern",
+    "lane": "Hard Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+1s Arctic Burn Duration", "20": "+50 Splinter Blast Damage", "25": "-50s Winter's Curse Cooldown" } }]
+  },
+  "113": {
+    "id": 113,
+    "name": "Arc Warden",
+    "lane": "Safe Lane",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 48, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_mjollnir", "item_bloodthorn"], "late_items": ["item_sheepstick", "item_manta_style", "item_satanic"], "situational_items": ["item_nullifier", "item_butterfly", "item_heart_of_tarrasque"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+3s Flux Duration", "20": "+100 Spark Wraith Damage", "25": "-25s Tempest Double Cooldown" } }]
+  },
+  "114": {
+    "id": 114,
+    "name": "Monkey King",
+    "lane": "Safe Lane / Mid",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 62, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_desolator", "item_basher"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_blink", "item_aghanims_scepter", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+8 Jingu Mastery Damage", "20": "+50 Boundless Strike Damage", "25": "+20% Tree Dance Cooldown" } }]
+  },
+  "119": {
+    "id": 119,
+    "name": "Dark Willow",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Bramble Damage", "20": "+2s Cursed Crown Stun", "25": "-30s Terrorize Cooldown" } }]
+  },
+  "120": {
+    "id": 120,
+    "name": "Pangolier",
+    "lane": "Mid / Offlane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_black_king_bar", "item_sheepstick", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+2s Shield Crash Duration", "20": "+50 Swashbuckle Damage", "25": "-25s Rolling Thunder Cooldown" } }]
+  },
+  "121": {
+    "id": 121,
+    "name": "Grimstroke",
+    "lane": "Hard Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+60 Stroke of Fate Damage", "20": "+1s Phantom's Embrace Silence", "25": "-30s Soulbind Cooldown" } }]
+  },
+  "123": {
+    "id": 123,
+    "name": "Hoodwink",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+30 Bushwhack Damage", "20": "+1.5s Bushwhack Stun", "25": "-8s Acorn Shot Cooldown" } }]
+  },
+  "126": {
+    "id": 126,
+    "name": "Void Spirit",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Mid", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_branches"], "early_items": ["item_power_treads", "item_magic_wand", "item_bottle"], "mid_items": ["item_kaya", "item_blink"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_ethereal_blade", "item_wind_waker", "item_octarine_core"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Aether Remnant Damage", "20": "+1s Dissimilate Stun", "25": "-25s Astral Step Cooldown" } }]
+  },
+  "128": {
+    "id": 128,
+    "name": "Snapfire",
+    "lane": "Soft Support",
+    "difficulty": "Easy",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 62, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Firesnap Cookie Damage", "20": "+2s Firesnap Cookie Stun", "25": "-30s Mortimer's Kisses Cooldown" } }]
+  },
+  "129": {
+    "id": 129,
+    "name": "Mars",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 60, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand", "item_vanguard"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_shivas_guard", "item_heart_of_tarrasque", "item_sheepstick"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 God's Rebuke Damage", "20": "+1s Spear Stun", "25": "+3 God's Rebuke Crit" } }]
+  },
+  "135": {
+    "id": 135,
+    "name": "Dawnbreaker",
+    "lane": "Offlane / Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_heart_of_tarrasque", "item_satanic", "item_desolator"], "neutral_item": "item_possessed_mask", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Celestial Hammer Damage", "20": "+1.5s Hammer Slow", "25": "-30s Solar Guardian Cooldown" } }]
+  },
+  "136": {
+    "id": 136,
+    "name": "Marci",
+    "lane": "Soft Support / Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 55, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_blink", "item_aether_lens", "item_solar_crest"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+35 Dispose Damage", "20": "+2s Rebound Stun", "25": "-20s Unleash Cooldown" } }]
+  },
+  "137": {
+    "id": 137,
+    "name": "Primal Beast",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_stout_shield", "item_clarity"], "early_items": ["item_phase_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_assault", "item_black_king_bar", "item_refresher"], "situational_items": ["item_heart_of_tarrasque", "item_shivas_guard", "item_sheepstick"], "neutral_item": "item_occult_bracelet", "ability_build": [1,3,1,2,1,4,1,3,3,3,4,2,2,2,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Onslaught Damage", "20": "+2s Pulverize Duration", "25": "-25s Trample Cooldown" } }]
+  },
+  "138": {
+    "id": 138,
+    "name": "Muerta",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 58, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_maelstrom", "item_desolator"], "late_items": ["item_butterfly", "item_basher", "item_satanic"], "situational_items": ["item_bloodthorn", "item_sheepstick", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+40 Dead Shot Damage", "20": "+2s The Calling Duration", "25": "+3s Piercing Shot Duration" } }]
+  },
+  "131": {
+    "id": 131,
+    "name": "Ring Master",
+    "lane": "Soft Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 51.5, "pickrate": 52, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_ethereal_blade", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Trick Shot Damage", "20": "+1s Tame the Beast Duration", "25": "-30s Spectacle Cooldown" } }]
+  },
+  "66": {
+    "id": 66,
+    "name": "Chen",
+    "lane": "Hard Support",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Support", "winrate": 51.0, "pickrate": 42, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_force_staff"], "late_items": ["item_aghanims_scepter", "item_refresher", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_solar_crest", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+60 Holy Persuasion Damage", "20": "+2s Test of Faith Duration", "25": "-40s Hand of God Cooldown" } }]
+  },
+  "82": {
+    "id": 82,
+    "name": "Meepo",
+    "lane": "Safe Lane / Jungle",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.5, "pickrate": 48, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_diffusal_blade", "item_blink"], "late_items": ["item_abyssal_blade", "item_satanic", "item_butterfly"], "situational_items": ["item_sheepstick", "item_nullifier", "item_desolator"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,1,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+30 Damage", "15": "+10% Poof Damage", "20": "+2 Earthbind Duration", "25": "+40 Geostrike Slow" } }]
+  },
+  "83": {
+    "id": 83,
+    "name": "Treant Protector",
+    "lane": "Hard Support",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Support", "winrate": 52.0, "pickrate": 58, "starting_items": ["item_tango", "item_tango", "item_clarity", "item_branches", "item_ward_observer"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_glimmer_cape", "item_aghanims_scepter"], "late_items": ["item_refresher", "item_shivas_guard", "item_octarine_core"], "situational_items": ["item_aether_lens", "item_force_staff", "item_blink"], "neutral_item": "item_arcane_ring", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Leech Seed Damage", "20": "+2s Overgrowth Duration", "25": "-30s Living Armor Cooldown" } }]
+  },
+  "10": {
+    "id": 10,
+    "name": "Morphling",
+    "lane": "Safe Lane",
+    "difficulty": "Very Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.8, "pickrate": 52, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_slippers_of_circlet"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_ethereal_blade", "item_linkens_sphere"], "late_items": ["item_heart_of_tarrasque", "item_skadi", "item_butterfly"], "situational_items": ["item_satanic", "item_manta_style", "item_abyssal_blade"], "neutral_item": "item_possessed_mask", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+25 Agility", "20": "+3s Adaptive Strike Stun", "25": "-25s Morph Cooldown" } }]
+  },
+  "12": {
+    "id": 12,
+    "name": "Phantom Lancer",
+    "lane": "Safe Lane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Carry", "winrate": 52.1, "pickrate": 55, "starting_items": ["item_tango", "item_flask", "item_slippers_of_circlet", "item_faerie_fire"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_diffusal_blade", "item_manta_style"], "late_items": ["item_heart_of_tarrasque", "item_abyssal_blade", "item_butterfly"], "situational_items": ["item_satanic", "item_skadi", "item_nullifier"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+150 Spirit Lance Damage", "20": "+100 Doppleganger Cast Range", "25": "-4s Spirit Lance Cooldown" } }]
+  },
+  "13": {
+    "id": 13,
+    "name": "Puck",
+    "lane": "Mid Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Nuker", "winrate": 51.5, "pickrate": 50, "starting_items": ["item_tango", "item_faerie_fire", "item_enchanted_mango", "item_branches"], "early_items": ["item_bottle", "item_power_treads"], "mid_items": ["item_etheral_blade", "item_kaya_and_sange"], "late_items": ["item_aghanims_scepter", "item_sheepstick", "item_refresher"], "situational_items": ["item_blink", "item_heart_of_tarrasque", "item_shivas_guard"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+40 Waning Rift Damage", "20": "-3s Phase Shift Cooldown", "25": "+75 Dream Coil Initial Damage" } }]
+  },
+
+  "145": {
+    "id": 145,
+    "name": "Kez",
+    "lane": "Safe Lane",
+    "difficulty": "Hard",
+    "builds": [{ "name": "Standard Carry", "winrate": 51.2, "pickrate": 48, "starting_items": ["item_tango", "item_flask", "item_faerie_fire", "item_slippers_of_circlet"], "early_items": ["item_power_treads", "item_magic_wand"], "mid_items": ["item_desolator", "item_blink"], "late_items": ["item_abyssal_blade", "item_butterfly", "item_satanic"], "situational_items": ["item_nullifier", "item_sheepstick", "item_manta_style"], "neutral_item": "item_possessed_mask", "ability_build": [2,1,2,3,2,4,2,1,1,1,4,3,3,3,4,3,3,3], "talents": { "10": "+20 Damage", "15": "+15% Katana Lifesteal", "20": "+2s Ravenous Duration", "25": "-5s Falcon Strike Cooldown" } }]
+  },
+  "155": {
+    "id": 155,
+    "name": "Largo",
+    "lane": "Offlane",
+    "difficulty": "Medium",
+    "builds": [{ "name": "Standard Offlane", "winrate": 51.8, "pickrate": 50, "starting_items": ["item_tango", "item_tango", "item_enchanted_mango", "item_branches"], "early_items": ["item_tranquil_boots", "item_magic_wand"], "mid_items": ["item_blink", "item_aghanims_scepter"], "late_items": ["item_shivas_guard", "item_refresher", "item_octarine_core"], "situational_items": ["item_force_staff", "item_sheepstick", "item_glimmer_cape"], "neutral_item": "item_arcane_ring", "ability_build": [1,2,1,3,1,4,1,2,2,2,4,3,3,3,4,3,3,3], "talents": { "10": "+200 Health", "15": "+30 Damage", "20": "+2s Taunt Duration", "25": "-40s Ultimate Cooldown" } }]
+  }
+}

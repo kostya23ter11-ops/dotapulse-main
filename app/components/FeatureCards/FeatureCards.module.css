@@ -1,0 +1,76 @@
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featureCard:hover {
+  background: rgba(255, 76, 76, 0.1);
+  border-color: #ff4c4c;
+  box-shadow: 0 10px 30px rgba(255, 76, 76, 0.15), inset 0 0 15px rgba(255, 76, 76, 0.1);
+  transform: translateY(-8px);
+}
+
+.cardIcon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ff4c4c;
+  text-shadow: 0 0 15px rgba(255, 76, 76, 0.8);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.featureCard:hover .cardIcon {
+  transform: scale(1.1) translateY(-5px);
+  color: #ffcc00;
+  text-shadow: 0 0 25px #ffcc00;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.cardDesc {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .featureCard {
+    padding: 24px 16px;
+  }
+}

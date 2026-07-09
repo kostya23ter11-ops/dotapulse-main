@@ -1,0 +1,653 @@
+---
+pid: 17976
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "cd \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; npm.cmd run dev"
+started_at: 2026-07-05T17:12:19.116Z
+running_for_ms: 11495001 
+---
+
+> dota-pulse@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.18.0.1:3000
+✓ Ready in 301ms
+
+ GET / 200 in 3.0s (next.js: 2.1s, application-code: 972ms)
+ GET / 200 in 45ms (next.js: 4ms, application-code: 41ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 45ms (next.js: 3ms, application-code: 41ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 47ms (next.js: 9ms, application-code: 38ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 42ms (next.js: 4ms, application-code: 39ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 36ms (next.js: 4ms, application-code: 33ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 48ms (next.js: 10ms, application-code: 38ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 44ms (next.js: 3ms, application-code: 41ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+Installing dependencies
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your app and pages directories).
+
+
+Installing devDependencies (npm):
+- @types/react
+
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 50ms (next.js: 3ms, application-code: 47ms)
+
+added 2 packages, and audited 593 packages in 14s
+npm warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @swc/core@1.15.43 (install: (install scripts present))
+npm warn allow-scripts   sharp@0.34.5 (install: (install scripts present))
+npm warn allow-scripts   unrs-resolver@1.12.2 (install: (install scripts present))
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+
+173 packages are looking for funding
+  run `npm fund` for details
+
+4 vulnerabilities (3 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  - include was updated to add '.next/dev/types/**/*.ts'
+
+ GET / 200 in 39ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 43ms (next.js: 8ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+✓ Compiled in 20ms
+⨯ ./app/layout.ts:28:11
+Expected '>', got 'ident'
+  26 | export default function RootLayout({ children }) {
+  27 |   return (
+> 28 |     <html lang="ru" className={`${montserrat.variable} ${russoOne.variable}`}>
+     |           ^^^^
+  29 |       <head>
+  30 |         {/* eslint-disable-next-line @next/next/no-css-tags */}
+  31 |         <link href="/boxicons.min.css" rel="stylesheet" />
+
+Parsing ecmascript source code failed
+
+
+
+./app/page.ts:12:13
+Expression expected
+  10 |   return (
+  11 |     <PageLayout>
+> 12 |       <Hero />
+     |             ^
+  13 |       <NewsSection />
+  14 |       <PopularHeroes heroStats={heroStats} />
+  15 |     </PageLayout>
+
+Parsing ecmascript source code failed
+
+
+
+./app/page.ts:12:14
+Expression expected
+  10 |   return (
+  11 |     <PageLayout>
+> 12 |       <Hero />
+     |              ^
+  13 |       <NewsSection />
+  14 |       <PopularHeroes heroStats={heroStats} />
+  15 |     </PageLayout>
+
+Parsing ecmascript source code failed
+
+
+ GET / 500 in 615ms (next.js: 534ms, application-code: 81ms)
+⨯ ./app/layout.ts:28:11
+Expected '>', got 'ident'
+  26 | export default function RootLayout({ children }) {
+  27 |   return (
+> 28 |     <html lang="ru" className={`${montserrat.variable} ${russoOne.variable}`}>
+     |           ^^^^
+  29 |       <head>
+  30 |         {/* eslint-disable-next-line @next/next/no-css-tags */}
+  31 |         <link href="/boxicons.min.css" rel="stylesheet" />
+
+Parsing ecmascript source code failed
+
+
+
+./app/page.ts:12:13
+Expression expected
+  10 |   return (
+  11 |     <PageLayout>
+> 12 |       <Hero />
+     |             ^
+  13 |       <NewsSection />
+  14 |       <PopularHeroes heroStats={heroStats} />
+  15 |     </PageLayout>
+
+Parsing ecmascript source code failed
+
+
+
+./app/page.ts:12:14
+Expression expected
+  10 |   return (
+  11 |     <PageLayout>
+> 12 |       <Hero />
+     |              ^
+  13 |       <NewsSection />
+  14 |       <PopularHeroes heroStats={heroStats} />
+  15 |     </PageLayout>
+
+Parsing ecmascript source code failed
+
+
+ GET / 500 in 14ms (next.js: 7ms, application-code: 7ms)
+✓ Compiled in 155ms
+✓ Compiled in 12ms
+✓ Compiled in 88ms
+✓ Compiled in 30ms
+✓ Compiled in 59ms
+✓ Compiled in 32ms
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.54.116.88:3000
+✓ Ready in 330ms
+
+ GET / 200 in 355ms (next.js: 141ms, application-code: 214ms)
+ GET /api/auth/me 200 in 210ms (next.js: 198ms, application-code: 13ms)
+ GET / 200 in 44ms (next.js: 4ms, application-code: 40ms)
+ GET / 200 in 42ms (next.js: 4ms, application-code: 38ms)
+ GET / 200 in 48ms (next.js: 7ms, application-code: 41ms)
+ GET / 200 in 47ms (next.js: 4ms, application-code: 43ms)
+ GET /api/news 200 in 8.2s (next.js: 232ms, application-code: 8.0s)
+ GET / 200 in 45ms (next.js: 4ms, application-code: 41ms)
+ GET / 200 in 44ms (next.js: 4ms, application-code: 40ms)
+ GET / 200 in 51ms (next.js: 4ms, application-code: 47ms)
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202's%20Dark%20Carnival%20has%20begun%20%20with%20a%20huge%20story%20chapter%20and%20five%20automaton%20hero%20personas%20%D0%A2%D1%83%D1%80%D0%BD%D0%B8%D1%80%D1%8B
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202%20Update%20-%207%2F1%2F2026%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/After%20mysteriously%20vanishing%20from%20the%20game%20%20Dota%202's%20Axe%20has%20been%20'replaced'%20by%20a%20fake%20%D0%93%D0%B5%D1%80%D0%BE%D0%B8%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/The%20Dark%20Carnival%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Valve%20calls%20out%20Dota%202%20dataminers%20desperate%20for%20Dark%20Carnival%20news%3A%20%22Why%20are%20you%20guys%20reading%20our%20va
+⨯ upstream image response timed out for https://loremflickr.com/800/450/A%20new%20Dota%202%20update%20buffs%20Nature's%20Prophet%20and%20Arc%20Warden%20%20but%20everyone's%20talking%20about%20a%20mysterious
+ GET / 200 in 47ms (next.js: 3ms, application-code: 43ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET / 200 in 48ms (next.js: 9ms, application-code: 39ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202%20Update%20-%207%2F1%2F2026%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202's%20Dark%20Carnival%20has%20begun%20%20with%20a%20huge%20story%20chapter%20and%20five%20automaton%20hero%20personas%20%D0%A2%D1%83%D1%80%D0%BD%D0%B8%D1%80%D1%8B
+⨯ upstream image response timed out for https://loremflickr.com/800/450/After%20mysteriously%20vanishing%20from%20the%20game%20%20Dota%202's%20Axe%20has%20been%20'replaced'%20by%20a%20fake%20%D0%93%D0%B5%D1%80%D0%BE%D0%B8%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/The%20Dark%20Carnival%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Valve%20calls%20out%20Dota%202%20dataminers%20desperate%20for%20Dark%20Carnival%20news%3A%20%22Why%20are%20you%20guys%20reading%20our%20va
+⨯ upstream image response timed out for https://loremflickr.com/800/450/A%20new%20Dota%202%20update%20buffs%20Nature's%20Prophet%20and%20Arc%20Warden%20%20but%20everyone's%20talking%20about%20a%20mysterious
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202%20Update%20-%207%2F1%2F2026%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Dota%202's%20Dark%20Carnival%20has%20begun%20%20with%20a%20huge%20story%20chapter%20and%20five%20automaton%20hero%20personas%20%D0%A2%D1%83%D1%80%D0%BD%D0%B8%D1%80%D1%8B
+⨯ upstream image response timed out for https://loremflickr.com/800/450/After%20mysteriously%20vanishing%20from%20the%20game%20%20Dota%202's%20Axe%20has%20been%20'replaced'%20by%20a%20fake%20%D0%93%D0%B5%D1%80%D0%BE%D0%B8%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/The%20Dark%20Carnival%20%D0%9F%D0%B0%D1%82%D1%87%20dota2
+⨯ upstream image response timed out for https://loremflickr.com/800/450/Valve%20calls%20out%20Dota%202%20dataminers%20desperate%20for%20Dark%20Carnival%20news%3A%20%22Why%20are%20you%20guys%20reading%20our%20va
+⨯ upstream image response timed out for https://loremflickr.com/800/450/A%20new%20Dota%202%20update%20buffs%20Nature's%20Prophet%20and%20Arc%20Warden%20%20but%20everyone's%20talking%20about%20a%20mysterious
+ GET / 200 in 37ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 35ms (next.js: 3ms, application-code: 32ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 48ms (next.js: 3ms, application-code: 45ms)
+ GET / 200 in 67ms (next.js: 4ms, application-code: 63ms)
+ GET / 200 in 57ms (next.js: 7ms, application-code: 51ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 44ms (next.js: 3ms, application-code: 41ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 44ms (next.js: 3ms, application-code: 41ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 41ms (next.js: 4ms, application-code: 38ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 56ms (next.js: 5ms, application-code: 52ms)
+ GET / 200 in 57ms (next.js: 4ms, application-code: 53ms)
+ GET / 200 in 58ms (next.js: 4ms, application-code: 54ms)
+ GET / 200 in 49ms (next.js: 4ms, application-code: 46ms)
+ GET / 200 in 53ms (next.js: 4ms, application-code: 50ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 44ms (next.js: 3ms, application-code: 41ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 40ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 54ms (next.js: 4ms, application-code: 50ms)
+ GET / 200 in 49ms (next.js: 4ms, application-code: 45ms)
+ GET / 200 in 44ms (next.js: 4ms, application-code: 40ms)
+ GET / 200 in 54ms (next.js: 4ms, application-code: 50ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 60ms (next.js: 4ms, application-code: 56ms)
+ GET / 200 in 52ms (next.js: 4ms, application-code: 48ms)
+ GET / 200 in 54ms (next.js: 3ms, application-code: 51ms)
+ GET / 200 in 50ms (next.js: 4ms, application-code: 47ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 43ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 35ms (next.js: 3ms, application-code: 32ms)
+ GET / 200 in 36ms (next.js: 3ms, application-code: 33ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 42ms (next.js: 3ms, application-code: 39ms)
+ GET / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 36ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 40ms (next.js: 3ms, application-code: 37ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 37ms (next.js: 3ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET / 200 in 812ms (next.js: 3ms, application-code: 809ms)
+ GET / 200 in 814ms (next.js: 3ms, application-code: 811ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+  Reload env: .env.local
+  Reload env: .env.local
+ GET / 200 in 804ms (next.js: 41ms, application-code: 763ms)
+ GET / 200 in 799ms (next.js: 1785µs, application-code: 797ms)
+ GET / 200 in 811ms (next.js: 1944µs, application-code: 809ms)
+ GET / 200 in 808ms (next.js: 1771µs, application-code: 806ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ GET / 200 in 803ms (next.js: 1889µs, application-code: 801ms)
+ GET / 200 in 799ms (next.js: 1587µs, application-code: 798ms)
+ GET / 200 in 807ms (next.js: 1684µs, application-code: 806ms)
+ GET / 200 in 798ms (next.js: 1682µs, application-code: 797ms)
+ GET / 200 in 804ms (next.js: 2ms, application-code: 802ms)
+ GET / 200 in 808ms (next.js: 1686µs, application-code: 806ms)
+ GET / 200 in 816ms (next.js: 1712µs, application-code: 814ms)
+ GET / 200 in 804ms (next.js: 1635µs, application-code: 802ms)
+ GET / 200 in 813ms (next.js: 1630µs, application-code: 812ms)
+ GET / 200 in 798ms (next.js: 1745µs, application-code: 797ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ GET / 200 in 798ms (next.js: 1597µs, application-code: 797ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ GET / 200 in 798ms (next.js: 1844µs, application-code: 796ms)
+ GET / 200 in 799ms (next.js: 1629µs, application-code: 797ms)
+ GET / 200 in 811ms (next.js: 1680µs, application-code: 810ms)
+ GET / 200 in 800ms (next.js: 2ms, application-code: 798ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ GET / 200 in 807ms (next.js: 1934µs, application-code: 805ms)
+ GET / 200 in 810ms (next.js: 1667µs, application-code: 808ms)
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+  Reload env: .env.local
+  Reload env: .env.local
+  Reload env: .env.local

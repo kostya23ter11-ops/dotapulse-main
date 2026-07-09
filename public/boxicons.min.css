@@ -1,0 +1,18 @@
+@font-face{font-family:boxicons;font-weight:400;font-style:normal;src:url(/fonts/boxicons/boxicons.woff2) format('woff2'),url(/fonts/boxicons/boxicons.woff) format('woff');font-display:swap;}
+.bx{font-family:boxicons!important;font-weight:400;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;display:inline-block;text-transform:none;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.bx-search:before{content:"\ebf7"}
+.bx-file:before{content:"\ead5"}
+.bxs-bot:before{content:"\ece7"}
+.bx-globe:before{content:"\eaf8"}
+.bx-log-out:before{content:"\eb4f"}
+.bx-menu:before{content:"\eb5f"}
+.bx-x:before{content:"\ec8d"}
+.bx-error:before{content:"\eac5"}
+.bx-refresh:before{content:"\ebd9"}
+.bx-link-external:before{content:"\eb3e"}
+.bx-crosshair:before{content:"\ea8b"}
+.bx-line-chart:before{content:"\eb3a"}
+.bxs-trophy:before{content:"\eed7"}
+.bxl-discord-alt:before{content:"\e925"}
+.bxl-telegram:before{content:"\e97b"}
+.bxl-vk:before{content:"\e988"}

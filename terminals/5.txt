@@ -1,0 +1,7 @@
+---
+pid: 24304
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "Start-Sleep -Seconds 90"
+started_at: 2026-07-05T17:46:19.679Z
+running_for_ms: 270002   
+---

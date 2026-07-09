@@ -1,0 +1,12 @@
+---
+pid: 22216
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "cd \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; npm.cmd exec vercel -- --version"
+started_at: 2026-07-05T18:56:06.157Z
+running_for_ms: 5250003  
+---
+npm warn exec The following package was not found and will be installed: vercel@54.20.1
+npm warn deprecated stream-to-promise@2.2.0: Deprecated. Use node:stream/promises and node:stream/consumers instead.
+npm warn deprecated tar@7.5.7: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+54.20.1
+Vercel CLI 54.20.1

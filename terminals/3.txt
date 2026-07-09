@@ -1,0 +1,119 @@
+---
+pid: 22516
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "node node_modules/next/dist/bin/next build 2>&1"
+started_at: 2026-07-05T17:45:20.601Z
+running_for_ms: 329993   
+---
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1940ms
+  Running TypeScript ...
+  Finished TypeScript in 2.5s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/14) ...
+  Generating static pages using 15 workers (3/14) 
+  Generating static pages using 15 workers (6/14) 
+  Generating static pages using 15 workers (10/14) 
+Failed to build /builds/page: /builds (attempt 1 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /leaderboard/page: /leaderboard (attempt 1 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /meta/page: /meta (attempt 1 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /page: / (attempt 1 of 3) because it took more than 60 seconds. Retrying again shortly.
+  Generating static pages using 15 workers (11/14) 
+node : Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+��ப�:1 ����:1
++ node node_modules/next/dist/bin/next build 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to set f...ror: terminated:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+✓ Generating static pages using 15 workers (14/14) in 71s
+Failed to set fetch cache https://api.opendota.com/api/proPlayers TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to build /builds/page: /builds (attempt 2 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /leaderboard/page: /leaderboard (attempt 2 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /page: / (attempt 2 of 3) because it took more than 60 seconds. Retrying again shortly.
+Failed to build /meta/page: /meta (attempt 2 of 3) because it took more than 60 seconds. Retrying again shortly.
+  Generating static pages using 15 workers (15/14) 
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to set fetch cache https://api.opendota.com/api/heroStats TypeError: terminated
+    at ignore-listed frames {
+  [cause]: Error: read ECONNRESET
+      at ignore-listed frames {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+Failed to build /page: / after 3 attempts.
+Export encountered an error on /page: /, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

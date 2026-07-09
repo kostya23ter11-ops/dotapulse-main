@@ -1,0 +1,40 @@
+{
+  "name": "dota-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "setup:env": "node scripts/setup-env.mjs",
+    "setup:env:vercel": "node scripts/setup-env.mjs --vercel",
+    "migrate:env": "node scripts/migrate-env-from-dotapulse.mjs",
+    "check:env": "node scripts/check-env.mjs",
+    "check:env:prod": "node scripts/check-env.mjs --production",
+    "deploy": "vercel deploy --prod --yes"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.38.0",
+    "jose": "^6.2.3",
+    "next": "16.2.6",
+    "openid": "^2.0.16",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.15.43",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "jest": "^30.4.2",
+    "typescript": "^6.0.3",
+    "vercel": "^54.20.1"
+  }
+}

@@ -1,0 +1,80 @@
+---
+pid: 13576
+cwd: "C:\Users\Kostya23\Downloads\dotapulse-main"
+command: "Set-Location \"C:\\Users\\Kostya23\\Downloads\\dotapulse-main\"; cmd /c \"npm run deploy 2>&1\""
+started_at: 2026-07-05T19:16:28.990Z
+running_for_ms: 4029998  
+---
+
+> dota-pulse@0.1.0 deploy
+> vercel deploy --prod --yes
+
+Vercel CLI 54.20.1 (Node.js 24.18.0)
+Retrieving project…
+Deploying kostya23ter11-ops-projects/dotapulse-main
+Uploading [--------------------] (0.0B/48.8KB)
+Uploading [========------------] (21.3KB/48.8KB)
+Uploading [==========----------] (26.1KB/48.8KB)
+Uploading [================----] (41.3KB/48.8KB)
+Uploading [====================] (48.8KB/48.8KB)
+  Inspect         https://vercel.com/kostya23ter11-ops-projects/dotapulse-main/9BktPjM53cvMKrBoTZFhv3nCmL3d
+  Production      https://dotapulse-main-ivrw743ae-kostya23ter11-ops-projects.vercel.app
+https://dotapulse-main-ivrw743ae-kostya23ter11-ops-projects.vercel.appBuilding…
+Building…
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Downloading 128 deployment files...
+Restored build cache from previous deployment (GQDZecgX1xAXLorGHGcm2yYumgcc)
+Warning: "vercel" found in project dependencies and will be ignored.
+Running "vercel build"
+Vercel CLI 54.19.0
+Installing dependencies...
+up to date in 1s
+198 packages are looking for funding
+run `npm fund` for details
+Detected Next.js version: 16.2.6
+Running "npm run build"
+> dota-pulse@0.1.0 build
+> next build
+Applying modifyConfig from Vercel
+▲ Next.js 16.2.6 (Turbopack)
+Creating an optimized production build ...
+✓ Compiled successfully in 6.9s
+Running TypeScript ...
+Finished TypeScript in 5.4s ...
+Collecting page data using 1 worker ...
+Generating static pages using 1 worker (0/14) ...
+Generating static pages using 1 worker (3/14)
+Generating static pages using 1 worker (6/14)
+Generating static pages using 1 worker (10/14)
+✓ Generating static pages using 1 worker (14/14) in 934ms
+Finalizing page optimization ...
+Running onBuildComplete from Vercel
+Route (app)                 Revalidate  Expire
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/ai
+├ ƒ /api/auth/callback
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/cron/refresh-news
+├ ƒ /api/news
+├ ○ /builds                        10m      1y
+├ ƒ /builds/[heroId]
+├ ○ /leaderboard                   10m      1y
+├ ○ /meta                          10m      1y
+├ ƒ /players/[id]
+└ ○ /updates                        1h      1y
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+Build Completed in /vercel/output [17s]
+Deploying outputs...
+Deployment completed
+Creating build cache...
+  Production      https://dotapulse-main-ivrw743ae-kostya23ter11-ops-projects.vercel.app
+Completing…
+▲ Aliased         https://dotapulse-main.vercel.app
+
+✓ Ready in 31s

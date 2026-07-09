@@ -1,0 +1,168 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2.4rem;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.subtitle {
+  color: #aaa;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.searchBar:focus-within {
+  border-color: #ff4c4c;
+  box-shadow: 0 0 15px rgba(255, 76, 76, 0.2);
+}
+
+.searchBar i {
+  color: #ff4c4c;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.searchInput::placeholder {
+  color: #666;
+}
+
+.patchesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patchCard {
+  background: #161616;
+  border: 1px solid #282828;
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: 0.3s;
+}
+
+.patchCard:hover {
+  border-color: rgba(255, 76, 76, 0.3);
+  transform: translateY(-2px);
+}
+
+.patchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.versionBadge {
+  background: #ff4c4c;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.patchDate {
+  color: #666;
+  font-size: 14px;
+}
+
+.patchLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff4c4c;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.patchLink:hover {
+  color: #ff7700;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #555;
+}
+
+.empty i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  color: #333;
+}
+
+.empty p {
+  font-size: 16px;
+}
+
+.footerNote {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+  font-size: 13px;
+}
+
+.footerNote a {
+  color: #ff4c4c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footerNote a:hover {
+  color: #ff7700;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 16px 40px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .patchHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
