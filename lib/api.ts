@@ -20,16 +20,12 @@ export async function clearHeroStatsCache(): Promise<void> {
 }
 
 async function fetchHeroStats(): Promise<OpenDotaHeroRaw[] | null> {
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    return null;
-  }
-
   const cached = await cacheGet<OpenDotaHeroRaw[]>(CACHE_KEYS.heroStats);
   if (cached) return cached;
 
   try {
     const res = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/heroStats`, {
-      next: { revalidate: 120 },
+      cache: 'no-store',
     });
     if (!res.ok) return null;
     const data: OpenDotaHeroRaw[] = await res.json();
