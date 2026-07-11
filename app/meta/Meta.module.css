@@ -170,6 +170,53 @@
   color: #888;
 }
 
+/* Table Info */
+.tableInfo {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pageBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: rgba(255, 76, 76, 0.2);
+  border-color: rgba(255, 76, 76, 0.4);
+}
+
+.pageBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: #aaa;
+  font-family: monospace;
+}
+
 @media (max-width: 768px) {
   .title { font-size: 1.8rem; }
   .metaTable th, .metaTable td {
@@ -178,6 +225,19 @@
   .roleFilters {
     justify-content: center;
   }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 1.4rem; }
+  .metaTable th, .metaTable td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+  .heroName { font-size: 0.85rem; }
+  .searchInput { max-width: 100%; }
+  .roleBtn { padding: 6px 10px; font-size: 0.8rem; }
+  .pagination { gap: 10px; }
+  .pageBtn { width: 36px; height: 36px; font-size: 16px; }
 }
 
 /* Стили для Skeleton Loading */

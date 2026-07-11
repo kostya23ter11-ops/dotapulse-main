@@ -73,7 +73,7 @@ const PopularHeroes = ({ heroStats }: { heroStats: HeroStatsByRank }) => {
         </div>
 
         <div className={styles.heroesGrid}>
-          {heroes.map((hero: HeroStats) => (
+          {heroes.map((hero: HeroStats, index: number) => (
             <div key={hero.id} className={styles.heroCard}>
               <div className={styles.imageWrapper}>
                 {hero.image && (
@@ -83,7 +83,8 @@ const PopularHeroes = ({ heroStats }: { heroStats: HeroStatsByRank }) => {
                     width={256}
                     height={144}
                     className={styles.heroImage}
-                    priority={hero.id < 5}
+                    priority={index < 3}
+                    loading={index >= 3 ? 'lazy' : undefined}
                   />
                 )}
               </div>

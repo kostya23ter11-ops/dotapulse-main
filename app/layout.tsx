@@ -3,7 +3,6 @@ import { Montserrat, Russo_One } from "next/font/google";
 import "./globals.css";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import ClientProviders from "./ClientProviders";
-import SparklesClient from "./components/Sparkles/SparklesClient";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -33,7 +32,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preload" href="/fonts/boxicons/boxicons.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={montserrat.className}>
-        <SparklesClient />
         <ClientProviders>
           <ErrorBoundary>
             {children}

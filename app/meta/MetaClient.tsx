@@ -6,9 +6,12 @@ import { useLocale } from '@/app/context/LocaleContext';
 import styles from './Meta.module.css';
 import type { HeroStats } from '@/lib/types';
 
+const ITEMS_PER_PAGE = 20;
+
 const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => {
   const [search, setSearch] = useState('');
   const [activeRole, setActiveRole] = useState('All');
+  const [page, setPage] = useState(1);
   const { t } = useLocale();
 
   const roles = ['All', 'Carry', 'Support', 'Nuker', 'Disabler', 'Durable', 'Escape'];
@@ -21,6 +24,9 @@ const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => 
       return matchesSearch && matchesRole;
     });
   }, [initialHeroes, search, activeRole]);
+
+  const totalPages = Math.ceil(filteredHeroes.length / ITEMS_PER_PAGE);
+  const pagedHeroes = filteredHeroes.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
 
   const getWinrateClass = (wr: number) => {
     if (wr >= 53) return styles.winrateHigh;
@@ -36,19 +42,23 @@ const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => 
           placeholder={t('meta.search')}
           className={styles.searchInput}
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
         />
         <div className={styles.roleFilters}>
           {roles.map(role => (
             <button
               key={role}
               className={`${styles.roleBtn} ${activeRole === role ? styles.activeRole : ''}`}
-              onClick={() => setActiveRole(role)}
+              onClick={() => { setActiveRole(role); setPage(1); }}
             >
               {role}
             </button>
           ))}
         </div>
+      </div>
+
+      <div className={styles.tableInfo}>
+        {filteredHeroes.length} {t('meta.heroes')}
       </div>
 
       <div className={styles.tableWrapper}>
@@ -63,9 +73,9 @@ const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => 
             </tr>
           </thead>
           <tbody>
-            {filteredHeroes.map((hero, index) => (
+            {pagedHeroes.map((hero, index) => (
               <tr key={hero.id} className={styles.tableRow}>
-                <td className={styles.indexCell}>{index + 1}</td>
+                <td className={styles.indexCell}>{(page - 1) * ITEMS_PER_PAGE + index + 1}</td>
                 <td>
                   <div className={styles.heroCell}>
                     <div className={styles.iconWrapper}>
@@ -100,6 +110,26 @@ const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => 
           </tbody>
         </table>
       </div>
+
+      {totalPages > 1 && (
+        <div className={styles.pagination}>
+          <button
+            className={styles.pageBtn}
+            onClick={() => setPage(p => Math.max(1, p - 1))}
+            disabled={page === 1}
+          >
+            ‹
+          </button>
+          <span className={styles.pageInfo}>{page} / {totalPages}</span>
+          <button
+            className={styles.pageBtn}
+            onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+            disabled={page === totalPages}
+          >
+            ›
+          </button>
+        </div>
+      )}
     </div>
   );
 };
