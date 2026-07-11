@@ -12,13 +12,9 @@ function getHeroImage(hero: OpenDotaHeroRaw & { name?: string }) {
 }
 
 async function fetchHeroStats() {
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    return null;
-  }
-
   try {
     const res = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/heroStats`, {
-      next: { revalidate: 600 },
+      cache: 'no-store',
     }).catch(() => null);
     if (res && res.ok) return await res.json();
   } catch (_) {}
@@ -64,16 +60,12 @@ function mapProPlayers(data: typeof proPlayersFallback): ProPlayer[] {
 }
 
 export async function getProLeaderboard(): Promise<ProPlayer[]> {
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    return mapProPlayers(proPlayersFallback);
-  }
-
   const cached = await cacheGet<ProPlayer[]>(CACHE_KEYS.proLeaderboard);
   if (cached) return cached;
 
   try {
     const res = await fetchWithTimeout('https://api.opendota.com/api/proPlayers', {
-      next: { revalidate: 3600 },
+      cache: 'no-store',
     }).catch(() => null);
 
     if (res && res.ok) {
