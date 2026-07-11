@@ -5,6 +5,8 @@ import PopularHeroes from './components/PopularHeroes/PopularHeroes';
 import SparklesClient from './components/Sparkles/SparklesClient';
 import { getHeroStatsByRank } from '../lib/api';
 
+export const revalidate = 300;
+
 export default async function Page() {
   const heroStats = await getHeroStatsByRank();
 
