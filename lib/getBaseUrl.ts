@@ -3,7 +3,7 @@
  * Особенно важно для Steam OpenID (realm + return_to должны совпадать с реальным доменом).
  */
 export function getBaseUrl(request?: Request | null): string {
-  const envBase = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL;
+  const envBase = (process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || '').trim();
   if (envBase) {
     let url = envBase.replace(/\/$/, '');
     if (!url.startsWith('http://') && !url.startsWith('https://')) {

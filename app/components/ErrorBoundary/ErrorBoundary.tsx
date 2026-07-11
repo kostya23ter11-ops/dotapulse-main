@@ -43,7 +43,7 @@ function ErrorFallback({ error, onRetry }: { error: Error | null; onRetry: () =>
         <i className={`bx bx-error ${styles.errorIcon}`}></i>
         <h2 className={styles.errorTitle}>{t('error.title')}</h2>
         <p className={styles.errorMessage}>
-          {error?.message || t('error.message')}
+          {process.env.NODE_ENV === 'development' ? error?.message : t('error.message')}
         </p>
         <button className={styles.retryBtn} onClick={onRetry}>
           <i className='bx bx-refresh'></i> {t('error.reload')}

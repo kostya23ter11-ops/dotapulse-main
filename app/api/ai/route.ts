@@ -126,7 +126,8 @@ function buildFallbackResponse(userMessage: string, heroes: HeroStats[]) {
 
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    const forwarded = req.headers.get('x-forwarded-for');
+    const ip = (forwarded ? forwarded.split(',')[0].trim() : null) || 'unknown';
     const rateLimit = await checkRateLimit(`ai:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_SEC);
     if (!rateLimit.allowed) {
       return Response.json(

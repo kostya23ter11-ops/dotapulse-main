@@ -85,7 +85,7 @@ export async function GET(request: Request): Promise<Response> {
         cookieStore.set('auth_token', token, {
           httpOnly: true,
           secure: baseUrl.startsWith('https'),
-          sameSite: 'lax',
+          sameSite: 'strict',
           maxAge: 60 * 60 * 24 * 30,
           path: '/',
         });

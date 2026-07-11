@@ -41,7 +41,7 @@ export default function AIAssistant() {
       if (data.message) {
         setMessages((prev) => [...prev, { role: 'assistant', content: data.message }]);
       } else {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error('Something went wrong');
       }
     } catch {
       setMessages((prev) => [

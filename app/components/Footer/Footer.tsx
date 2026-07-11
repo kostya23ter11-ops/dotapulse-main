@@ -25,14 +25,6 @@ const Footer = () => {
               <li><Link href="/meta">{t('nav.meta')}</Link></li>
             </ul>
           </div>
-          <div className={styles.social}>
-            <h4>{t('footer.social')}</h4>
-            <div className={styles.socialIcons}>
-              <a href="#" aria-label="Discord"><i className='bx bxl-discord-alt'></i></a>
-              <a href="#" aria-label="Telegram"><i className='bx bxl-telegram'></i></a>
-              <a href="#" aria-label="VK"><i className='bx bxl-vk'></i></a>
-            </div>
-          </div>
         </div>
         <div className={styles.footerBottom}>
           <p>&copy; {new Date().getFullYear()} DotaPulse. {t('footer.copyright')}</p>
