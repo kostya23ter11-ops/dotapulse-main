@@ -162,10 +162,19 @@ const NewsSection = () => {
             aria-label={t('news.latest')}
           >
             {loading ? (
-              <div className={styles.loadingCard}>
-                <div className={styles.loadingSpinner}></div>
-                <p>{t('news.loading')}</p>
-              </div>
+              <>
+                {[1, 2, 3].map(i => (
+                  <div key={i} className={styles.skeletonCard}>
+                    <div className={styles.skeletonImage}></div>
+                    <div className={styles.skeletonContent}>
+                      <div className={styles.skeletonDate}></div>
+                      <div className={styles.skeletonTitle}></div>
+                      <div className={styles.skeletonText}></div>
+                      <div className={styles.skeletonTextShort}></div>
+                    </div>
+                  </div>
+                ))}
+              </>
             ) : (
               news.map((item) => (
                 <div

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import AIAssistant from '../AIAssistant/AIAssistant';
 import { useLocale } from '@/app/context/LocaleContext';
 import type { AuthUser, Locale } from '@/lib/types';
@@ -15,6 +15,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale, t } = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -36,7 +37,8 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' });
-    window.location.href = '/';
+    setUser(null);
+    router.push('/');
   };
 
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
