@@ -367,6 +367,69 @@
   color: #ff4c4c;
 }
 
+/* Background Section */
+.bgPreview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bgLabel {
+  color: #888;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.bgThumb {
+  width: 200px;
+  height: 100px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bgPresets {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bgPresetBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.bgPresetBtn:hover {
+  border-color: rgba(255, 76, 76, 0.4);
+  background: rgba(255, 76, 76, 0.05);
+}
+
+.bgPresetActive {
+  border-color: #ff4c4c;
+  background: rgba(255, 76, 76, 0.1);
+  color: #fff;
+}
+
+.bgPresetThumb {
+  width: 120px;
+  height: 60px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .adminContainer {

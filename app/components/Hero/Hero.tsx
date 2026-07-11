@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 import FeatureCards from '../FeatureCards/FeatureCards';
 import PlayerSearch from '../PlayerSearch/PlayerSearch';
@@ -8,17 +9,25 @@ import { useLocale } from '@/app/context/LocaleContext';
 
 const Hero = () => {
   const { t } = useLocale();
+  const [bgUrl, setBgUrl] = useState('/fon.jpg');
+
+  useEffect(() => {
+    fetch('/api/admin/background')
+      .then(r => r.json())
+      .then(data => { if (data.current) setBgUrl(data.current); })
+      .catch(() => {});
+  }, []);
 
   return (
     <section className={styles.hero}>
       <div className={styles.bgWrapper}>
-        <Image 
-          src="/fon.jpg" 
-          alt="Dota 2 Background" 
-          fill 
+        <Image
+          src={bgUrl}
+          alt="Dota 2 Background"
+          fill
           sizes="100vw"
-          className={styles.bgImage} 
-          priority 
+          className={styles.bgImage}
+          priority
         />
       </div>
       

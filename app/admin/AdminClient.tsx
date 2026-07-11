@@ -27,10 +27,16 @@ interface NewsItem {
   excerpt: string;
 }
 
+interface BackgroundData {
+  current: string;
+  presets: { id: string; name: string; url: string }[];
+}
+
 export default function AdminClient() {
   const { t } = useLocale();
   const [stats, setStats] = useState<SystemStats | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
+  const [background, setBackground] = useState<BackgroundData | null>(null);
   const [loading, setLoading] = useState(true);
   const [cacheClearing, setCacheClearing] = useState(false);
   const [newsRefreshing, setNewsRefreshing] = useState(false);
@@ -42,9 +48,10 @@ export default function AdminClient() {
 
   async function loadData() {
     try {
-      const [statsRes, newsRes] = await Promise.all([
+      const [statsRes, newsRes, bgRes] = await Promise.all([
         fetch('/api/admin/stats'),
         fetch('/api/admin/news'),
+        fetch('/api/admin/background'),
       ]);
 
       if (statsRes.ok) {
@@ -54,6 +61,10 @@ export default function AdminClient() {
       if (newsRes.ok) {
         const data = await newsRes.json();
         setNews(data.items || []);
+      }
+
+      if (bgRes.ok) {
+        setBackground(await bgRes.json());
       }
     } catch (err) {
       console.error('Failed to load admin data:', err);
@@ -104,6 +115,26 @@ export default function AdminClient() {
       setMessage({ type: 'error', text: 'Ошибка сети' });
     } finally {
       setNewsRefreshing(false);
+    }
+  }
+
+  async function changeBackground(url: string) {
+    setMessage(null);
+    try {
+      const res = await fetch('/api/admin/background', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setMessage({ type: 'success', text: 'Фон обновлён' });
+        setBackground(prev => prev ? { ...prev, current: url } : null);
+      } else {
+        setMessage({ type: 'error', text: data.error || 'Ошибка' });
+      }
+    } catch {
+      setMessage({ type: 'error', text: 'Ошибка сети' });
     }
   }
 
@@ -248,6 +279,30 @@ export default function AdminClient() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* Background Management */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          <i className="bx bx-image"></i>
+          Фон главной страницы
+        </h2>
+        <div className={styles.bgPreview}>
+          <span className={styles.bgLabel}>Текущий фон:</span>
+          <div className={styles.bgThumb} style={{ backgroundImage: `url(${background?.current || '/fon.jpg'})` }}></div>
+        </div>
+        <div className={styles.bgPresets}>
+          {background?.presets.map(preset => (
+            <button
+              key={preset.id}
+              onClick={() => changeBackground(preset.url)}
+              className={`${styles.bgPresetBtn} ${background.current === preset.url ? styles.bgPresetActive : ''}`}
+            >
+              <div className={styles.bgPresetThumb} style={{ backgroundImage: `url(${preset.url})` }}></div>
+              <span>{preset.name}</span>
+            </button>
+          ))}
+        </div>
       </section>
 
       {/* Quick Actions */}
