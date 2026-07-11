@@ -62,7 +62,7 @@ const MetaClient = ({ initialHeroes = [] }: { initialHeroes?: HeroStats[] }) => 
       </div>
 
       <div className={styles.tableWrapper}>
-        <table className={styles.metaTable}>
+        <table className={styles.metaTable} aria-label={t('meta.title')}>
           <thead>
             <tr>
               <th>#</th>

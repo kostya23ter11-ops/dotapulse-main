@@ -157,6 +157,9 @@ const NewsSection = () => {
           <div
             ref={carouselRef}
             className={styles.carousel}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label={t('news.latest')}
           >
             {loading ? (
               <div className={styles.loadingCard}>

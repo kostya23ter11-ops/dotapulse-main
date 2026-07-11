@@ -90,6 +90,14 @@
   width: 100%;
 }
 
+.menuLinkActive {
+  color: #fff;
+}
+
+.menuLinkActive::after {
+  width: 100%;
+}
+
 .headerActions {
   display: flex;
   align-items: center;

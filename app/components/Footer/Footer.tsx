@@ -23,6 +23,7 @@ const Footer = () => {
               <li><Link href="/updates">{t('nav.updates')}</Link></li>
               <li><Link href="/builds">{t('nav.builds')}</Link></li>
               <li><Link href="/meta">{t('nav.meta')}</Link></li>
+              <li><Link href="/leaderboard">{t('nav.leaderboard')}</Link></li>
             </ul>
           </div>
         </div>

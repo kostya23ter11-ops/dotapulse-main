@@ -21,6 +21,29 @@ export const metadata = {
   icons: {
     icon: "/titan.png",
   },
+  openGraph: {
+    title: "DotaPulse - Аналитика твоих матчей",
+    description: "Актуальные сборки, аналитика мета-игры и лучшие гайды от профессионалов Dota 2.",
+    url: "https://dotapulse.ru",
+    siteName: "DotaPulse",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DotaPulse",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DotaPulse - Аналитика твоих матчей",
+    description: "Актуальные сборки, аналитика мета-игры и лучшие гайды от профессионалов Dota 2.",
+    images: ["/og-image.png"],
+  },
+  metadataBase: new URL("https://dotapulse.ru"),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import AIAssistant from '../AIAssistant/AIAssistant';
 import { useLocale } from '@/app/context/LocaleContext';
 import type { AuthUser, Locale } from '@/lib/types';
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [loading, setLoading] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale, t } = useLocale();
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -37,6 +39,8 @@ const Navbar = () => {
     window.location.href = '/';
   };
 
+  const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+
   return (
     <header className={styles.dotaHeader}>
       <Link href="/" className={styles.logoWrapper}>
@@ -47,20 +51,20 @@ const Navbar = () => {
       </Link>
 
       <nav className={`${styles.mainMenu} ${mobileOpen ? styles.open : ''}`}>
-        <Link href="/updates" className={styles.menuLink} onClick={() => setMobileOpen(false)}>
+        <Link href="/updates" className={`${styles.menuLink} ${isActive('/updates') ? styles.menuLinkActive : ''}`} aria-current={isActive('/updates') ? 'page' : undefined} onClick={() => setMobileOpen(false)}>
           {t('nav.updates')}
         </Link>
-        <Link href="/builds" className={styles.menuLink} onClick={() => setMobileOpen(false)}>
+        <Link href="/builds" className={`${styles.menuLink} ${isActive('/builds') ? styles.menuLinkActive : ''}`} aria-current={isActive('/builds') ? 'page' : undefined} onClick={() => setMobileOpen(false)}>
           {t('nav.builds')}
         </Link>
-        <Link href="/meta" className={styles.menuLink} onClick={() => setMobileOpen(false)}>
+        <Link href="/meta" className={`${styles.menuLink} ${isActive('/meta') ? styles.menuLinkActive : ''}`} aria-current={isActive('/meta') ? 'page' : undefined} onClick={() => setMobileOpen(false)}>
           {t('nav.meta')}
         </Link>
-        <Link href="/leaderboard" className={styles.menuLink} onClick={() => setMobileOpen(false)}>
+        <Link href="/leaderboard" className={`${styles.menuLink} ${isActive('/leaderboard') ? styles.menuLinkActive : ''}`} aria-current={isActive('/leaderboard') ? 'page' : undefined} onClick={() => setMobileOpen(false)}>
           {t('nav.leaderboard')}
         </Link>
         {!loading && user?.role === 'admin' && (
-          <Link href="/admin" className={styles.menuLink} onClick={() => setMobileOpen(false)}>
+          <Link href="/admin" className={`${styles.menuLink} ${isActive('/admin') ? styles.menuLinkActive : ''}`} aria-current={isActive('/admin') ? 'page' : undefined} onClick={() => setMobileOpen(false)}>
             {t('admin.admin')}
           </Link>
         )}

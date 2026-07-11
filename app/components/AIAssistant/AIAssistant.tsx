@@ -79,9 +79,9 @@ export default function AIAssistant() {
               <div className={styles.assistant}>
                 {t('ai.greeting')}
                 <div className={styles.suggestions}>
-                  <button onClick={() => { setInput('Кто сильнее всего в текущей мете?'); }} className={styles.suggestionBtn}>{t('ai.topHeroes')}</button>
-                  <button onClick={() => { setInput('Как поднять MMR?'); }} className={styles.suggestionBtn}>{t('ai.mmrTips')}</button>
-                  <button onClick={() => { setInput('Кого брать против Pudge?'); }} className={styles.suggestionBtn}>{t('ai.counterPudge')}</button>
+                  <button onClick={() => { setInput(t('ai.topHeroesQ')); }} className={styles.suggestionBtn}>{t('ai.topHeroes')}</button>
+                  <button onClick={() => { setInput(t('ai.mmrTipsQ')); }} className={styles.suggestionBtn}>{t('ai.mmrTips')}</button>
+                  <button onClick={() => { setInput(t('ai.counterPudgeQ')); }} className={styles.suggestionBtn}>{t('ai.counterPudge')}</button>
                 </div>
               </div>
             )}
