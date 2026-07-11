@@ -7,7 +7,7 @@ export const CACHE_KEYS = {
 } as const;
 
 export const CACHE_TTL = {
-  heroStats: 300,
+  heroStats: 60,
   newsLatest: 3 * 60 * 60,
   proLeaderboard: 3600,
 } as const;

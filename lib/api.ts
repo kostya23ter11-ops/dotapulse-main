@@ -29,7 +29,7 @@ async function fetchHeroStats(): Promise<OpenDotaHeroRaw[] | null> {
 
   try {
     const res = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/heroStats`, {
-      next: { revalidate: 600 },
+      next: { revalidate: 120 },
     });
     if (!res.ok) return null;
     const data: OpenDotaHeroRaw[] = await res.json();
