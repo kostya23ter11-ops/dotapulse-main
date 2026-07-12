@@ -19,6 +19,14 @@ interface SystemStats {
   cache: Record<string, string>;
 }
 
+interface AnalyticsData {
+  totals: { visitors: number; views: number };
+  today: { visitors: number; views: number };
+  hourly: { hour: string; views: number }[];
+  daily: { date: string; views: number; visitors: number }[];
+  topPaths: { path: string; views: number }[];
+}
+
 interface NewsItem {
   id: number | string;
   title: string;
@@ -35,6 +43,7 @@ interface BackgroundData {
 export default function AdminClient() {
   const { t } = useLocale();
   const [stats, setStats] = useState<SystemStats | null>(null);
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
   const [background, setBackground] = useState<BackgroundData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -48,10 +57,11 @@ export default function AdminClient() {
 
   async function loadData() {
     try {
-      const [statsRes, newsRes, bgRes] = await Promise.all([
+      const [statsRes, newsRes, bgRes, analyticsRes] = await Promise.all([
         fetch('/api/admin/stats'),
         fetch('/api/admin/news'),
         fetch('/api/admin/background'),
+        fetch('/api/analytics/stats'),
       ]);
 
       if (statsRes.ok) {
@@ -65,6 +75,10 @@ export default function AdminClient() {
 
       if (bgRes.ok) {
         setBackground(await bgRes.json());
+      }
+
+      if (analyticsRes.ok) {
+        setAnalytics(await analyticsRes.json());
       }
     } catch (err) {
       console.error('Failed to load admin data:', err);
@@ -189,6 +203,96 @@ export default function AdminClient() {
             <span className={styles.statValue}>{stats?.system.env || 'N/A'}</span>
           </div>
         </div>
+      </section>
+
+      {/* Analytics Overview */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          <i className="bx bx-bar-chart"></i>
+          Аналитика посетителей
+        </h2>
+        <div className={styles.statsGrid}>
+          <div className={styles.statCard}>
+            <span className={styles.statLabel}>Всего посетителей</span>
+            <span className={styles.statValue}>{analytics?.totals.visitors || 0}</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statLabel}>Всего просмотров</span>
+            <span className={styles.statValue}>{analytics?.totals.views || 0}</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statLabel}>Сегодня посетителей</span>
+            <span className={styles.statValue}>{analytics?.today.visitors || 0}</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statLabel}>Сегодня просмотров</span>
+            <span className={styles.statValue}>{analytics?.today.views || 0}</span>
+          </div>
+        </div>
+
+        {/* Hourly Chart */}
+        {analytics?.hourly && analytics.hourly.length > 0 && (
+          <div className={styles.chartSection}>
+            <h3 className={styles.chartTitle}>Просмотры за 24 часа</h3>
+            <div className={styles.chart}>
+              {analytics.hourly.map((item, i) => {
+                const maxViews = Math.max(...analytics.hourly.map(h => h.views), 1);
+                const height = (item.views / maxViews) * 100;
+                return (
+                  <div key={i} className={styles.chartBar}>
+                    <div
+                      className={styles.chartBarFill}
+                      style={{ height: `${Math.max(height, 2)}%` }}
+                      title={`${item.hour}: ${item.views}`}
+                    />
+                    <span className={styles.chartBarLabel}>{item.hour}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Daily Chart */}
+        {analytics?.daily && analytics.daily.length > 0 && (
+          <div className={styles.chartSection}>
+            <h3 className={styles.chartTitle}>Последние 7 дней</h3>
+            <div className={styles.dailyChart}>
+              {analytics.daily.map((item, i) => (
+                <div key={i} className={styles.dailyRow}>
+                  <span className={styles.dailyDate}>{item.date.slice(5)}</span>
+                  <div className={styles.dailyBar}>
+                    <div
+                      className={styles.dailyBarFill}
+                      style={{ width: `${Math.max((item.views / Math.max(...analytics.daily.map(d => d.views), 1)) * 100, 2)}%` }}
+                    />
+                  </div>
+                  <span className={styles.dailyViews}>{item.views}</span>
+                  <span className={styles.dailyVisitors}>{item.visitors}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Top Pages */}
+        {analytics?.topPaths && analytics.topPaths.length > 0 && (
+          <div className={styles.topPaths}>
+            <h3 className={styles.chartTitle}>Популярные страницы</h3>
+            {analytics.topPaths.map((item, i) => (
+              <div key={i} className={styles.pathRow}>
+                <span className={styles.pathName}>{item.path}</span>
+                <div className={styles.pathBar}>
+                  <div
+                    className={styles.pathBarFill}
+                    style={{ width: `${Math.max((item.views / analytics.topPaths[0].views) * 100, 2)}%` }}
+                  />
+                </div>
+                <span className={styles.pathViews}>{item.views}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Environment Variables */}

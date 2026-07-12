@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import ClientProviders from "./ClientProviders";
+import Analytics from "./components/Analytics/Analytics";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <ErrorBoundary>
             {children}
           </ErrorBoundary>
+          <Analytics />
         </ClientProviders>
         <SpeedInsights />
       </body>
