@@ -182,8 +182,12 @@
   outline-offset: 2px;
 }
 
-/* ── User profile ── */
-.userProfile {
+/* ── Profile trigger + dropdown ── */
+.profileWrapper {
+  position: relative;
+}
+
+.profileTrigger {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -191,10 +195,11 @@
   padding: 5px 12px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
   transition: border-color 0.25s ease;
 }
 
-.userProfile:hover {
+.profileTrigger:hover {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -215,27 +220,79 @@
   white-space: nowrap;
 }
 
-.logoutBtn {
+.chevron {
   color: #888;
-  font-size: 18px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  margin-left: 2px;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 190px;
+  background: rgba(20, 20, 22, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 6px;
+  z-index: 1003;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownLink,
+.dropdownBtn {
   display: flex;
   align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ccc;
+  text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.logoutBtn:hover {
+.dropdownLink:hover,
+.dropdownBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.dropdownBtnLogout {
   color: #ff4c4c;
-  transform: scale(1.1);
 }
 
-.logoutBtn:focus-visible {
-  outline: 2px solid #ff4c4c;
-  outline-offset: 1px;
+.dropdownBtnLogout:hover {
+  background: rgba(255, 76, 76, 0.1);
+  color: #ff4c4c;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 4px 8px;
 }
 
 /* ── Auth skeleton ── */
@@ -348,6 +405,10 @@
   }
 
   .headerActions {
+    display: none;
+  }
+
+  .profileWrapper {
     display: none;
   }
 

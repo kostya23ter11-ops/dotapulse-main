@@ -64,10 +64,14 @@ function MatchRow({ match, t }: { match: PlayerMatch; t: (key: string) => string
 
 function HeroRow({ hero, gamesLabel }: { hero: PlayerHero; gamesLabel: string }) {
   const wr = parseFloat(hero.winrate);
-  const color = getWinrateColor(parseFloat(hero.winrate));
+  const color = getWinrateColor(wr);
 
   return (
     <div className={styles.heroRow}>
+      <div
+        className={styles.heroWinrateBar}
+        style={{ width: `${wr}%`, background: color }}
+      />
       <div className={styles.heroRowImage}>
         <img src={hero.image} alt={hero.hero_name} width={58} height={33} />
       </div>

@@ -26,6 +26,7 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
   if (!player) {
     return (
       <PageLayout>
+        <div className={styles.profileBg} />
         <div className={styles.errorContainer}>
           <h1 style={{color: 'white', marginTop: '100px'}}>{t('player.notFound')}</h1>
           <p style={{color: '#aaa'}}>{t('player.notFoundDesc')}</p>
@@ -46,14 +47,15 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
 
   return (
     <PageLayout>
+      <div className={styles.profileBg} />
       <div className={styles.profileContainer}>
-        <div className={styles.profileHeader}>
+        <div className={styles.profileHero}>
           <div className={styles.avatarWrapper}>
             <Image
               src={player.avatar?.replace('http://', 'https://')}
               alt={player.name}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
               className={styles.avatar}
             />
           </div>
@@ -61,32 +63,47 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
           <div className={styles.playerInfo}>
             <h1 className={styles.playerName}>{player.name}</h1>
             <div className={styles.rankInfo}>
-              <span className={styles.rankText}>
-                {t('player.rank')}: {getRankName(player.rank_tier)}
+              <span className={styles.rankBadge}>
+                <i className="bx bx-medal" />
+                {getRankName(player.rank_tier)}
                 {player.leaderboard_rank && ` (Top ${player.leaderboard_rank})`}
               </span>
             </div>
+            <a
+              href={`https://steamcommunity.com/profiles/${player.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.steamLink}
+            >
+              <i className="bx bx-link-external" />
+              {t('player.viewOnSteam')}
+            </a>
           </div>
         </div>
 
         <div className={styles.statsGrid}>
           <div className={styles.statCard}>
+            <i className={`bx bx-trophy ${styles.statIcon}`} />
             <span className={styles.statLabel}>{t('player.wins')}</span>
             <span className={`${styles.statValue} ${styles.win}`}>{wl?.win || 0}</span>
           </div>
           <div className={styles.statCard}>
+            <i className={`bx bx-x ${styles.statIcon}`} />
             <span className={styles.statLabel}>{t('player.losses')}</span>
             <span className={`${styles.statValue} ${styles.loss}`}>{wl?.lose || 0}</span>
           </div>
           <div className={styles.statCard}>
+            <i className={`bx bx-percent ${styles.statIcon}`} />
             <span className={styles.statLabel}>{t('player.winrate')}</span>
             <span className={styles.statValue}>{winrate}%</span>
           </div>
           <div className={styles.statCard}>
+            <i className={`bx bx-game ${styles.statIcon}`} />
             <span className={styles.statLabel}>{t('player.totalGames')}</span>
             <span className={styles.statValue}>{totalGames.toLocaleString()}</span>
           </div>
           <div className={styles.statCard}>
+            <i className={`bx bx-star ${styles.statIcon}`} />
             <span className={styles.statLabel}>{t('player.avgKda')}</span>
             <span className={styles.statValue}>{avgKda}</span>
           </div>

@@ -21,6 +21,7 @@ const Navbar = () => {
   const [loading, setLoading] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { locale, setLocale, t } = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -49,6 +50,7 @@ const Navbar = () => {
   }, []);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+  const closeDropdown = useCallback(() => setDropdownOpen(false), []);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -61,16 +63,32 @@ const Navbar = () => {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && mobileOpen) closeMobile();
+      if (e.key === 'Escape') {
+        if (mobileOpen) closeMobile();
+        if (dropdownOpen) closeDropdown();
+      }
     };
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
-  }, [mobileOpen, closeMobile]);
+  }, [mobileOpen, closeMobile, dropdownOpen, closeDropdown]);
+
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest(`.${styles.profileWrapper}`)) {
+        closeDropdown();
+      }
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, [dropdownOpen, closeDropdown]);
 
   const handleLogout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' });
     setUser(null);
     closeMobile();
+    closeDropdown();
     router.push('/');
   };
 
@@ -87,12 +105,47 @@ const Navbar = () => {
     }
     if (user) {
       return (
-        <div className={styles.userProfile}>
-          <Image src={user.avatar} alt={user.name} width={30} height={30} className={styles.userAvatar} />
-          <span className={styles.userName}>{user.name}</span>
-          <button onClick={handleLogout} className={styles.logoutBtn} aria-label="Logout">
-            <i className="bx bx-log-out" />
+        <div className={styles.profileWrapper}>
+          <button
+            className={styles.profileTrigger}
+            onClick={() => setDropdownOpen(prev => !prev)}
+            aria-expanded={dropdownOpen}
+            aria-haspopup="true"
+          >
+            <Image src={user.avatar} alt={user.name} width={30} height={30} className={styles.userAvatar} />
+            <span className={styles.userName}>{user.name}</span>
+            <i className={`bx bx-chevron-down ${styles.chevron} ${dropdownOpen ? styles.chevronOpen : ''}`} />
           </button>
+
+          <div className={`${styles.dropdown} ${dropdownOpen ? styles.dropdownOpen : ''}`} role="menu">
+            <Link
+              href={`/players/${user.steamId}`}
+              className={styles.dropdownLink}
+              role="menuitem"
+              onClick={closeDropdown}
+            >
+              <i className="bx bx-user" />
+              {t('auth.profile')}
+            </Link>
+            <Link
+              href="/settings"
+              className={styles.dropdownLink}
+              role="menuitem"
+              onClick={closeDropdown}
+            >
+              <i className="bx bx-cog" />
+              {t('auth.settings')}
+            </Link>
+            <div className={styles.dropdownDivider} />
+            <button
+              className={`${styles.dropdownBtn} ${styles.dropdownBtnLogout}`}
+              role="menuitem"
+              onClick={handleLogout}
+            >
+              <i className="bx bx-log-out" />
+              {t('auth.logout')}
+            </button>
+          </div>
         </div>
       );
     }

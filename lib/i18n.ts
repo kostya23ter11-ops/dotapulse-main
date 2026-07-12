@@ -16,6 +16,8 @@ const translations = {
       login: 'Войти через Steam',
       logout: 'Выйти',
       find: 'Найти',
+      profile: 'Мой профиль',
+      settings: 'Настройки',
     },
     features: {
       builds: 'Сборки героев',
@@ -86,6 +88,7 @@ const translations = {
       hoursAgo: 'ч назад',
       daysAgo: 'д назад',
       monthsAgo: 'мес. назад',
+      viewOnSteam: 'Профиль Steam',
     },
     leaderboard: {
       title: 'Таблицы лидеров',
@@ -172,6 +175,8 @@ const translations = {
       login: 'Sign in with Steam',
       logout: 'Sign out',
       find: 'Search',
+      profile: 'My Profile',
+      settings: 'Settings',
     },
     features: {
       builds: 'Hero Builds',
@@ -242,6 +247,7 @@ const translations = {
       hoursAgo: 'h ago',
       daysAgo: 'd ago',
       monthsAgo: 'mo ago',
+      viewOnSteam: 'Steam Profile',
     },
     leaderboard: {
       title: 'Leaderboard',
