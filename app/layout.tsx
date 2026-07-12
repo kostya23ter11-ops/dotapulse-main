@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Montserrat, Russo_One } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import ClientProviders from "./ClientProviders";
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {children}
           </ErrorBoundary>
         </ClientProviders>
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -14,10 +14,11 @@
     "migrate:env": "node scripts/migrate-env-from-dotapulse.mjs",
     "check:env": "node scripts/check-env.mjs",
     "check:env:prod": "node scripts/check-env.mjs --production",
-    "deploy": "vercel deploy --prod --yes"
+    "deploy": "node scripts/deploy.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.0",
+    "@vercel/speed-insights": "^2.0.0",
     "jose": "^6.2.3",
     "next": "16.2.6",
     "openid": "^2.0.16",
