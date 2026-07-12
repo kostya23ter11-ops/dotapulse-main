@@ -21,7 +21,7 @@ export default function PremiumSuccessPage() {
         </div>
         <h1 className={styles.title}>Оплата прошла успешно!</h1>
         <p className={styles.desc}>
-          Ваша подписка DotaPulse PRO активирована. Перезагрузите страницу, чтобы обновить статус.
+          Ваша подписка PULSE PRO активирована. Перезагрузите страницу, чтобы обновить статус.
         </p>
         <Link href="/premium" className={styles.link}>
           Вернуться на страницу подписки

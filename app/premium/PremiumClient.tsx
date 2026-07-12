@@ -69,7 +69,7 @@ export default function PremiumClient() {
           <i className="bx bx-crown" />
         </div>
         <h1 className={styles.title}>
-          DotaPulse <span className={styles.pro}>PRO</span>
+          PULSE <span className={styles.pro}>PRO</span>
         </h1>
         <p className={styles.subtitle}>{t('premium.heroSubtitle')}</p>
 

@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
           return_url: `${baseUrl}/premium/success`,
         },
         capture: true,
-        description: 'DotaPulse Pro — ежемесячная подписка',
+        description: 'PULSE PRO — ежемесячная подписка',
         metadata: {
           steamId,
         },
