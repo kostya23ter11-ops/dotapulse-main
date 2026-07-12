@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import AIAssistant from '../AIAssistant/AIAssistant';
+import PremiumBadge from '../PremiumBadge/PremiumBadge';
 import { useLocale } from '@/app/context/LocaleContext';
 import type { AuthUser, Locale } from '@/lib/types';
 import styles from './Navbar.module.css';
@@ -136,6 +137,16 @@ const Navbar = () => {
               <i className="bx bx-cog" />
               {t('auth.settings')}
             </Link>
+            <Link
+              href="/premium"
+              className={styles.dropdownLink}
+              role="menuitem"
+              onClick={closeDropdown}
+            >
+              <i className="bx bx-crown" />
+              {t('premium.title')}
+              {!user.premium && <PremiumBadge size="sm" />}
+            </Link>
             <div className={styles.dropdownDivider} />
             <button
               className={`${styles.dropdownBtn} ${styles.dropdownBtnLogout}`}
@@ -239,6 +250,16 @@ const Navbar = () => {
             </button>
           </div>
 
+          {!loading && user && (
+            <Link
+              href="/premium"
+              className={`${styles.proBadge} ${user.premium ? styles.proBadgeActive : ''}`}
+            >
+              <i className="bx bx-crown" />
+              <span>PRO</span>
+            </Link>
+          )}
+
           {renderAuthSection()}
         </div>
 
@@ -281,11 +302,30 @@ const Navbar = () => {
               {t('admin.admin')}
             </Link>
           )}
+          <Link
+            href="/premium"
+            className={`${styles.mobileMenuLink} ${isActive('/premium') ? styles.mobileMenuLinkActive : ''}`}
+            onClick={closeMobile}
+          >
+            {t('premium.title')}
+            {user?.premium && <PremiumBadge size="sm" />}
+          </Link>
         </nav>
 
         <div className={styles.mobileDivider} />
 
         <div className={styles.mobileActions}>
+          {!loading && user && (
+            <Link
+              href="/premium"
+              className={`${styles.mobileProBadge} ${user.premium ? styles.mobileProBadgeActive : ''}`}
+              onClick={closeMobile}
+            >
+              <i className="bx bx-crown" />
+              <span>PRO</span>
+            </Link>
+          )}
+
           <div className={styles.mobileLangRow}>
             <button
               className={`${styles.langBtn} ${locale === 'ru' ? styles.langBtnActive : ''}`}

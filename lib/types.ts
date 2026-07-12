@@ -104,6 +104,8 @@ export interface AuthUser {
   name: string;
   avatar: string;
   role?: 'admin' | 'user';
+  premium?: boolean;
+  premiumExpiresAt?: number;
 }
 
 export interface NewsItem {

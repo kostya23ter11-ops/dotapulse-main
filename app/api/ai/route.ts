@@ -1,4 +1,5 @@
 import { NextRequest } from 'next/server';
+import { jwtVerify } from 'jose';
 import { getHeroStats, getAllHeroesStats } from '@/lib/api';
 import { checkRateLimit } from '@/lib/rateLimit';
 import type { HeroStats } from '@/lib/types';
@@ -126,20 +127,36 @@ function buildFallbackResponse(userMessage: string, heroes: HeroStats[]) {
 
 export async function POST(req: NextRequest) {
   try {
-    const forwarded = req.headers.get('x-forwarded-for');
-    const ip = (forwarded ? forwarded.split(',')[0].trim() : null) || 'unknown';
-    const rateLimit = await checkRateLimit(`ai:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_SEC);
-    if (!rateLimit.allowed) {
-      return Response.json(
-        { error: 'Too many requests' },
-        {
-          status: 429,
-          headers: {
-            'X-RateLimit-Limit': String(rateLimit.limit),
-            'X-RateLimit-Remaining': String(rateLimit.remaining),
+    // Check premium status to bypass rate limit
+    let isPremiumUser = false;
+    const token = req.cookies.get('auth_token')?.value;
+    if (token && process.env.AUTH_SECRET) {
+      try {
+        const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
+        const { payload } = await jwtVerify(token, secret);
+        isPremiumUser = payload.premium === true &&
+          typeof payload.premiumExpiresAt === 'number' &&
+          payload.premiumExpiresAt > Date.now();
+      } catch { /* ignore */ }
+    }
+
+    // Rate limit (skip for premium users)
+    if (!isPremiumUser) {
+      const forwarded = req.headers.get('x-forwarded-for');
+      const ip = (forwarded ? forwarded.split(',')[0].trim() : null) || 'unknown';
+      const rateLimit = await checkRateLimit(`ai:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_SEC);
+      if (!rateLimit.allowed) {
+        return Response.json(
+          { error: 'Too many requests' },
+          {
+            status: 429,
+            headers: {
+              'X-RateLimit-Limit': String(rateLimit.limit),
+              'X-RateLimit-Remaining': String(rateLimit.remaining),
+            },
           },
-        },
-      );
+        );
+      }
     }
 
     const body = await req.json();

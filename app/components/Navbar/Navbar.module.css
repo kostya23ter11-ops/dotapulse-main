@@ -158,6 +158,44 @@
   outline-offset: 1px;
 }
 
+/* ── PRO badge ── */
+.proBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 119, 0, 0.12);
+  border: 1px solid rgba(255, 119, 0, 0.3);
+  color: #ff7700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.proBadge i {
+  font-size: 14px;
+}
+
+.proBadge:hover {
+  background: rgba(255, 119, 0, 0.2);
+  border-color: rgba(255, 119, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.proBadgeActive {
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.2), rgba(255, 119, 0, 0.2));
+  border-color: rgba(255, 76, 76, 0.4);
+  color: #fff;
+}
+
+.proBadgeActive:hover {
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.3), rgba(255, 119, 0, 0.3));
+  border-color: rgba(255, 76, 76, 0.6);
+}
+
 /* ── Profile button ── */
 .profileBtn {
   background: linear-gradient(135deg, #ff4c4c, #cc0000);
@@ -495,6 +533,33 @@
     padding: 10px;
     font-size: 14px;
     border-radius: 8px;
+  }
+
+  .mobileProBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(255, 119, 0, 0.12);
+    border: 1px solid rgba(255, 119, 0, 0.3);
+    color: #ff7700;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+  }
+
+  .mobileProBadge i {
+    font-size: 16px;
+  }
+
+  .mobileProBadgeActive {
+    background: linear-gradient(135deg, rgba(255, 76, 76, 0.2), rgba(255, 119, 0, 0.2));
+    border-color: rgba(255, 76, 76, 0.4);
+    color: #fff;
   }
 
   .mobileProfileBtn {

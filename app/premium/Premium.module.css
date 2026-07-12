@@ -1,0 +1,231 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.crownIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.2), rgba(255, 119, 0, 0.2));
+  border: 1px solid rgba(255, 76, 76, 0.3);
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.crownIcon i {
+  font-size: 2.5rem;
+  color: #ff7700;
+}
+
+.title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.pro {
+  background: linear-gradient(135deg, #ff4c4c, #ff7700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.activeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  margin-top: 20px;
+}
+
+/* Pricing Card */
+.pricingCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-family: 'Russo One', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.period {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.priceNote {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.buyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff4c4c, #cc0000);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 76, 76, 0.4);
+}
+
+.buyButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Features */
+.features {
+  margin-bottom: 64px;
+}
+
+.featuresTitle {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  border-color: rgba(255, 76, 76, 0.3);
+  transform: translateY(-2px);
+}
+
+.featureCard i {
+  font-size: 1.8rem;
+  color: #ff4c4c;
+  margin-bottom: 14px;
+}
+
+.featureCard h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.featureCard p {
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* FAQ */
+.faq {
+  margin-bottom: 40px;
+}
+
+.faqTitle {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.faqItem h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.faqItem p {
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 100px 16px 40px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .price {
+    font-size: 2.2rem;
+  }
+
+  .pricingCard {
+    padding: 28px 20px;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,6 +3,7 @@ import { SignJWT } from 'jose';
 import { cookies } from 'next/headers';
 import { getBaseUrl } from '@/lib/getBaseUrl';
 import { getUserRole } from '@/lib/admin';
+import { getPremiumStatus } from '@/lib/premium';
 
 export async function GET(request: Request): Promise<Response> {
   const baseUrl = getBaseUrl(request);
@@ -71,9 +72,13 @@ export async function GET(request: Request): Promise<Response> {
           return resolve(Response.redirect(`${baseUrl}/?error=auth_not_configured`));
         }
         const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
+
+        const premiumStatus = await getPremiumStatus(user.steamId);
         const userWithRole = {
           ...user,
           role: getUserRole(user.steamId),
+          premium: !!premiumStatus,
+          premiumExpiresAt: premiumStatus?.expiresAt,
         };
         const token = await new SignJWT(userWithRole)
           .setProtectedHeader({ alg: 'HS256' })

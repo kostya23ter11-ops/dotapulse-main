@@ -1,8 +1,16 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { useLocale } from '@/app/context/LocaleContext';
 import styles from './Settings.module.css';
+
+interface User {
+  steamId: string;
+  name: string;
+  premium?: boolean;
+  premiumExpiresAt?: number;
+}
 
 interface Settings {
   notifications: {
@@ -50,9 +58,14 @@ export default function SettingsClient() {
   const { t } = useLocale();
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
   const [saved, setSaved] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     setSettings(loadSettings());
+    fetch('/api/auth/me')
+      .then((r) => r.json())
+      .then((data) => setUser(data.user))
+      .catch(() => {});
   }, []);
 
   const toggle = useCallback(
@@ -172,6 +185,29 @@ export default function SettingsClient() {
             />
             <span className={styles.toggleSlider} />
           </label>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          <i className="bx bx-crown" />
+          {t('premium.settingsTitle')}
+        </h2>
+
+        <div className={styles.settingRow}>
+          <div className={styles.settingInfo}>
+            <span className={styles.settingLabel}>
+              {user?.premium ? t('premium.statusActive') : t('premium.statusInactive')}
+            </span>
+            {user?.premium && user.premiumExpiresAt && (
+              <span className={styles.settingDesc}>
+                {t('premium.expiresIn')} {new Date(user.premiumExpiresAt).toLocaleDateString('ru-RU')}
+              </span>
+            )}
+          </div>
+          <Link href="/premium" className={styles.premiumBtn}>
+            {user?.premium ? t('premium.manageBtn') : t('premium.subscribeBtn')}
+          </Link>
         </div>
       </section>
     </div>

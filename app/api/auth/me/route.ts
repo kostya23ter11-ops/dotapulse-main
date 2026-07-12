@@ -15,8 +15,19 @@ export async function GET() {
     }
     const secret = new TextEncoder().encode(process.env.AUTH_SECRET);
     const { payload } = await jwtVerify(token, secret);
-    return Response.json({ user: payload });
-  } catch (error) {
+
+    const premiumValid = payload.premium === true &&
+      typeof payload.premiumExpiresAt === 'number' &&
+      payload.premiumExpiresAt > Date.now();
+
+    return Response.json({
+      user: {
+        ...payload,
+        premium: premiumValid,
+        premiumExpiresAt: premiumValid ? payload.premiumExpiresAt : undefined,
+      },
+    });
+  } catch {
     return Response.json({ user: null });
   }
 }
