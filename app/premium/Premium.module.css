@@ -1,37 +1,70 @@
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 120px 20px 60px;
+  padding: 100px 20px 60px;
 }
 
-/* Hero */
+/* ── Hero ── */
 .hero {
+  position: relative;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
+  padding: 40px 0;
+}
+
+.heroGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 76, 76, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: heroPulse 4s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
 }
 
 .crownIcon {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, rgba(255, 76, 76, 0.2), rgba(255, 119, 0, 0.2));
-  border: 1px solid rgba(255, 76, 76, 0.3);
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.15), rgba(255, 119, 0, 0.15));
+  border: 2px solid rgba(255, 119, 0, 0.4);
   border-radius: 50%;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  animation: crownFloat 3s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(255, 119, 0, 0.2);
+}
+
+@keyframes crownFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .crownIcon i {
-  font-size: 2.5rem;
-  color: #ff7700;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ff4c4c, #ff7700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 12px rgba(255, 119, 0, 0.5));
 }
 
 .title {
+  position: relative;
   font-family: 'Russo One', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
 }
 
 .pro {
@@ -39,42 +72,89 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 76, 76, 0.4));
 }
 
 .subtitle {
+  position: relative;
   color: #aaa;
-  font-size: 1.1rem;
-  max-width: 500px;
+  font-size: 1.15rem;
+  max-width: 520px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .activeBadge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(76, 175, 80, 0.15);
+  background: rgba(76, 175, 80, 0.12);
   border: 1px solid rgba(76, 175, 80, 0.3);
   color: #4caf50;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 12px 24px;
+  border-radius: 12px;
   font-size: 0.95rem;
-  margin-top: 20px;
+  font-weight: 500;
+  margin-top: 24px;
+  animation: fadeIn 0.5s ease;
 }
 
-/* Pricing Card */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Pricing Section ── */
+.pricingSection {
+  position: relative;
+  margin-bottom: 72px;
+}
+
 .pricingCard {
+  position: relative;
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 40px;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 119, 0, 0.25);
+  border-radius: 24px;
+  padding: 48px 40px;
   text-align: center;
-  margin-bottom: 64px;
+  overflow: hidden;
+}
+
+.pricingGlow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.3), rgba(255, 119, 0, 0.3));
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.pricingCard:hover .pricingGlow {
+  opacity: 1;
+}
+
+.popularBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff4c4c, #ff7700);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .priceRow {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: center;
   gap: 4px;
   margin-bottom: 8px;
@@ -82,12 +162,26 @@
 
 .price {
   font-family: 'Russo One', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
+  line-height: 1;
   color: #fff;
 }
 
+.priceCurrency {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff7700;
+}
+
 .period {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #888;
 }
 
@@ -100,21 +194,38 @@
 .buyButton {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: linear-gradient(135deg, #ff4c4c, #cc0000);
   color: #fff;
   border: none;
-  border-radius: 10px;
-  padding: 14px 40px;
+  border-radius: 12px;
+  padding: 16px 48px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buyButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.buyButton:hover::before {
+  left: 100%;
 }
 
 .buyButton:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 76, 76, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 76, 76, 0.5);
 }
 
 .buyButton:disabled {
@@ -122,17 +233,140 @@
   cursor: not-allowed;
 }
 
-/* Features */
-.features {
-  margin-bottom: 64px;
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-.featuresTitle {
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.priceFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 32px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.priceFeature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.priceFeature i {
+  color: #4caf50;
+  font-size: 1.1rem;
+}
+
+/* ── Comparison Table ── */
+.comparison {
+  margin-bottom: 72px;
+}
+
+.sectionTitle {
   font-family: 'Russo One', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #fff;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+}
+
+.comparisonTable {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.comparisonHeader {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comparisonFeature {
+  color: #aaa;
+}
+
+.comparisonFree {
+  text-align: center;
+  color: #888;
+}
+
+.comparisonPro {
+  text-align: center;
+  color: #ff7700;
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.comparisonRow:last-child {
+  border-bottom: none;
+}
+
+.comparisonRow:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparisonRow .comparisonFeature {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.comparisonRow .comparisonFree,
+.comparisonRow .comparisonPro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparisonRow .comparisonFree i,
+.comparisonRow .comparisonPro i {
+  font-size: 1.2rem;
+}
+
+.comparisonRow .comparisonFree i {
+  color: #555;
+}
+
+.comparisonRow .comparisonPro i {
+  color: #4caf50;
+}
+
+.limited {
+  font-size: 0.8rem;
+  color: #888;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ── Features Grid ── */
+.features {
+  margin-bottom: 72px;
 }
 
 .featuresGrid {
@@ -142,63 +376,117 @@
 }
 
 .featureCard {
+  position: relative;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 28px 24px;
-  transition: all 0.3s ease;
+  border-radius: 18px;
+  padding: 32px 28px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4c4c, #ff7700);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .featureCard:hover {
   border-color: rgba(255, 76, 76, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(255, 76, 76, 0.15);
 }
 
-.featureCard i {
-  font-size: 1.8rem;
+.featureCard:hover::before {
+  opacity: 1;
+}
+
+.featureIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.12), rgba(255, 119, 0, 0.12));
+  border-radius: 14px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.featureIcon i {
+  font-size: 1.5rem;
   color: #ff4c4c;
-  margin-bottom: 14px;
 }
 
 .featureCard h3 {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .featureCard p {
   color: #888;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* FAQ */
+/* ── FAQ ── */
 .faq {
-  margin-bottom: 40px;
+  margin-bottom: 64px;
 }
 
-.faqTitle {
-  font-family: 'Russo One', sans-serif;
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 32px;
+.faqGrid {
+  display: grid;
+  gap: 16px;
 }
 
 .faqItem {
+  display: flex;
+  gap: 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 24px;
-  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faqIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 119, 0, 0.1);
+  border-radius: 10px;
+}
+
+.faqIcon i {
+  font-size: 1.2rem;
+  color: #ff7700;
 }
 
 .faqItem h4 {
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .faqItem p {
@@ -207,25 +495,117 @@
   line-height: 1.5;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ── Bottom CTA ── */
+.bottomCta {
+  text-align: center;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.08), rgba(255, 119, 0, 0.08));
+  border: 1px solid rgba(255, 119, 0, 0.2);
+  border-radius: 20px;
+}
+
+.bottomCta p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.buyButtonSmall {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff4c4c, #cc0000);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyButtonSmall:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 76, 76, 0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
   .container {
-    padding: 100px 16px 40px;
+    padding: 80px 16px 40px;
   }
 
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .crownIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .crownIcon i {
+    font-size: 2.2rem;
+  }
+
+  .pricingCard {
+    padding: 32px 20px;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+
+  .buyButton {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparisonHeader,
+  .comparisonRow {
+    grid-template-columns: 1fr 70px 70px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+
+  .faqItem {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faqIcon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
   .title {
     font-size: 1.8rem;
   }
 
   .price {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
-  .pricingCard {
-    padding: 28px 20px;
+  .priceFeatures {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .featuresGrid {
-    grid-template-columns: 1fr;
+  .comparisonHeader,
+  .comparisonRow {
+    grid-template-columns: 1fr 60px 60px;
+    font-size: 0.8rem;
   }
 }

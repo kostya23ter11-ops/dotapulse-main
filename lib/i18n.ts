@@ -198,6 +198,11 @@ const translations = {
       expiresIn: 'Истекает',
       manageBtn: 'Управлять подпиской',
       subscribeBtn: 'Подключить PRO',
+      popular: 'Популярное',
+      compareTitle: 'Free vs PRO',
+      feature: 'Возможность',
+      featPriority: 'Приоритетный доступ',
+      bottomCta: 'Готов прокачать свой Dota 2 опыт?',
     },
     admin: {
       title: 'Панель администратора',
@@ -408,6 +413,11 @@ const translations = {
       expiresIn: 'Expires in',
       manageBtn: 'Manage subscription',
       subscribeBtn: 'Get PRO',
+      popular: 'Popular',
+      compareTitle: 'Free vs PRO',
+      feature: 'Feature',
+      featPriority: 'Priority access',
+      bottomCta: 'Ready to level up your Dota 2 experience?',
     },
     admin: {
       title: 'Admin Panel',
