@@ -33,7 +33,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 10px 50px 30px;
+  padding: 10px 60px 30px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
 }
@@ -454,7 +454,7 @@
 
   .carousel {
     gap: 16px;
-    padding: 10px 40px 24px;
+    padding: 10px 50px 24px;
   }
 }
 

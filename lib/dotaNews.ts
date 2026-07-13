@@ -59,8 +59,8 @@ function extractImageFromContents(contents: string) {
     if (url.includes('icon') || url.includes('avatar') || url.length < 50) return null;
     return url;
   }
-  // Ищем {STEAM_CLAN_IMAGE} плейсхолдеры
-  const clanMatch = contents.match(/\{STEAM_CLAN_IMAGE\}([a-f0-9\/]+)/i);
+  // Ищем {STEAM_CLAN_IMAGE} и {STEAM_CLAN_LOC_IMAGE} плейсхолдеры
+  const clanMatch = contents.match(/\{STEAM_CLAN(?:_LOC)?_IMAGE\}([a-f0-9\/]+)/i);
   if (clanMatch && clanMatch[1]) {
     return `https://clan.cloudflare.steamstatic.com/images/${clanMatch[1]}.png`;
   }
@@ -112,10 +112,10 @@ function getNewsImage(title: string, contents: string, category: string) {
  */
 function cleanText(html: string, maxLength = 300) {
   if (!html) return '';
-  // Убираем HTML теги и Steam плейсхолдеры изображений
+  // Убираем HTML теги и все Steam плейсхолдеры изображений
   let text = html
     .replace(/<[^>]*>/g, ' ')
-    .replace(/\{STEAM_CLAN_IMAGE\}[^\s]*/g, '')
+    .replace(/\{STEAM_CLAN(?:_LOC)?_IMAGE\}[^\s]*/g, '')
     .replace(/\s+/g, ' ')
     .trim();
   if (text.length > maxLength) {
