@@ -7,7 +7,7 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://cdn.cloudflare.steamstatic.com https://avatars.steamstatic.com data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://cdn.cloudflare.steamstatic.com https://avatars.steamstatic.com https://avatars.akamai.steamstatic.com https://media.steampowered.com https://cdn.akamai.steamstatic.com https://cdn.stratz.com https://loremflickr.com https://clan.cloudflare.steamstatic.com data:; font-src 'self'; connect-src 'self' https://vitals.vercel-insights.com; frame-ancestors 'none';" }
       ]
     }
   ],

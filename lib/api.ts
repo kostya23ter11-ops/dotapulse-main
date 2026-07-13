@@ -112,6 +112,7 @@ export async function getPlayerData(accountId: string): Promise<PlayerData | nul
       steamId64 = (BigInt(accountId) + BigInt('76561197960265728')).toString();
     }
 
+    // Steam API для имени/аватара
     let player = null;
     if (STEAM_API_KEY) {
       const url = `${STEAM_ENDPOINTS.PLAYER_SUMMARY}?key=${STEAM_API_KEY}&steamids=${steamId64}`;
@@ -122,21 +123,24 @@ export async function getPlayerData(accountId: string): Promise<PlayerData | nul
       }
     }
 
+    // Один вызов OpenDota вместо двух
     const acc32 = toAccountId32(accountId);
+    let odData: Record<string, unknown> | null = null;
+    if (acc32) {
+      try {
+        const odRes = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/players/${acc32}`, {
+          next: { revalidate: 120 },
+        }).catch(() => null);
+        if (odRes && odRes.ok) {
+          odData = await odRes.json();
+        }
+      } catch { /* OpenDota fetch failed */ }
+    }
 
-    let rankTier = null;
-    let leaderboardRank = null;
-    try {
-      const odRes = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/players/${acc32}`, {
-        next: { revalidate: 120 },
-      }).catch(() => null);
-      if (odRes && odRes.ok) {
-        const od = await odRes.json();
-        rankTier = od.rank_tier || null;
-        leaderboardRank = od.leaderboard_rank || null;
-      }
-    } catch (_) {}
+    const rankTier = (odData?.rank_tier as number) ?? null;
+    const leaderboardRank = (odData?.leaderboard_rank as number) ?? null;
 
+    // Ветка 1: данные Steam API
     if (player) {
       return {
         id: accountId,
@@ -144,28 +148,21 @@ export async function getPlayerData(accountId: string): Promise<PlayerData | nul
         avatar: player.avatarfull,
         profile_url: player.profileurl,
         rank_tier: rankTier,
-        leaderboard_rank: leaderboardRank
+        leaderboard_rank: leaderboardRank,
       };
     }
 
-    if (acc32) {
-      try {
-        const odRes = await fetchWithTimeout(`${OPENDOTA_BASE_URL}/players/${acc32}`, {
-          next: { revalidate: 120 },
-        }).catch(() => null);
-        if (odRes && odRes.ok) {
-          const od = await odRes.json();
-          const p = od.profile || {};
-          return {
-            id: accountId,
-            name: p.personaname || `Player ${acc32}`,
-            avatar: p.avatarfull || 'https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg',
-            profile_url: p.profileurl,
-            rank_tier: od.rank_tier || rankTier,
-            leaderboard_rank: od.leaderboard_rank || leaderboardRank
-          };
-        }
-      } catch (_) {}
+    // Ветка 2: фоллбэк на профиль OpenDota
+    if (odData?.profile) {
+      const p = odData.profile as Record<string, string>;
+      return {
+        id: accountId,
+        name: p.personaname || `Player ${acc32}`,
+        avatar: p.avatarfull || 'https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg',
+        profile_url: p.profileurl,
+        rank_tier: rankTier,
+        leaderboard_rank: leaderboardRank,
+      };
     }
 
     return null;

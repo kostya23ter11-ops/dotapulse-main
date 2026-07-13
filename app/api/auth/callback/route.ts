@@ -64,7 +64,8 @@ export async function GET(request: Request): Promise<Response> {
             }
           }
         }
-      } catch {
+      } catch (e) {
+        console.error('[Auth] Steam API enrichment failed:', e);
       }
 
       try {
