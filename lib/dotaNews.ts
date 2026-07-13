@@ -334,12 +334,15 @@ async function fetchAndProcessNews(limit: number): Promise<NewsItem[]> {
     const data = await res.json();
     const rawItems = data?.appnews?.newsitems || [];
 
-    // Обрабатываем последовательно с задержкой, чтобы не превышать rate limits Groq (особенно на free tier)
-    const processed = [];
-    for (const item of rawItems) {
-      processed.push(await enrichWithAI(item));
-      if (processed.length < rawItems.length) {
-        await sleep(1500); // 1.5s между вызовами LLM, чтобы уложиться в TPM лимиты
+    // Обрабатываем батчами по 3 для параллельной обработки с учётом rate limits Groq
+    const processed: NewsItem[] = [];
+    const BATCH_SIZE = 3;
+    for (let i = 0; i < rawItems.length; i += BATCH_SIZE) {
+      const batch = rawItems.slice(i, i + BATCH_SIZE);
+      const batchResults = await Promise.all(batch.map((item: SteamNewsRawItem) => enrichWithAI(item)));
+      processed.push(...batchResults);
+      if (i + BATCH_SIZE < rawItems.length) {
+        await sleep(1500); // 1.5s между батчами
       }
     }
 

@@ -74,8 +74,8 @@ export async function kvGet<T>(key: string): Promise<T | null> {
   if (redis) {
     try {
       return await redis.get<T>(key);
-    } catch (error) {
-      console.error('[KV] get failed, using memory fallback:', error);
+    } catch {
+      console.error('[KV] get failed, using memory fallback');
     }
   }
 
@@ -94,8 +94,8 @@ export async function kvSet(key: string, value: unknown, ttlSeconds: number): Pr
     try {
       await redis.set(key, value, { ex: ttlSeconds });
       return;
-    } catch (error) {
-      console.error('[KV] set failed, using memory fallback:', error);
+    } catch {
+      console.error('[KV] set failed, using memory fallback');
     }
   }
 
@@ -108,8 +108,8 @@ export async function kvDel(key: string): Promise<void> {
     try {
       await redis.del(key);
       return;
-    } catch (error) {
-      console.error('[KV] del failed, using memory fallback:', error);
+    } catch {
+      console.error('[KV] del failed, using memory fallback');
     }
   }
   memoryStore.delete(key);
@@ -124,8 +124,8 @@ export async function kvIncr(key: string, ttlSeconds: number): Promise<number> {
         await redis.expire(key, ttlSeconds);
       }
       return count;
-    } catch (error) {
-      console.error('[KV] incr failed, using memory fallback:', error);
+    } catch {
+      console.error('[KV] incr failed, using memory fallback');
     }
   }
 

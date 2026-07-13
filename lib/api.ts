@@ -32,6 +32,7 @@ async function fetchHeroStats(): Promise<OpenDotaHeroRaw[] | null> {
     await cacheSet(CACHE_KEYS.heroStats, data, CACHE_TTL.heroStats);
     return data;
   } catch {
+    console.error('[API] fetchHeroStats failed');
     return null;
   }
 }
@@ -54,6 +55,7 @@ export async function getRecentPatches(): Promise<Patch[]> {
     const data = await res.json();
     return data.slice(-10).reverse();
   } catch {
+    console.error('[API] getRecentPatches failed, using fallback');
     return [
       { id: 1, name: '7.37', date: '2026-06-10T00:00:00.000Z' },
       { id: 2, name: '7.36c', date: '2026-05-28T00:00:00.000Z' },
@@ -280,6 +282,21 @@ function mapHero(hero: OpenDotaHeroRaw, pickKey: string, winKey: string): HeroSt
   };
 }
 
+function mapHeroAggregate(hero: OpenDotaHeroRaw, totalPicks: number, totalWins: number): HeroStats {
+  const winrateNum = totalPicks > 0 ? parseFloat(((totalWins / totalPicks) * 100).toFixed(1)) : 0;
+  return {
+    id: hero.id,
+    name: hero.localized_name || 'Unknown',
+    winrate: `${winrateNum}%`,
+    winrateNum,
+    pickrate: totalPicks,
+    roles: hero.roles || [],
+    image: getHeroImageUrl(hero.img || ''),
+    primary_attr: hero.primary_attr,
+    attack_type: hero.attack_type,
+  };
+}
+
 export async function getHeroStats(limit = 8): Promise<HeroStats[]> {
   try {
     const data = await fetchHeroStats();
@@ -333,18 +350,7 @@ export async function getHeroStatsByRank(limit = 8): Promise<HeroStatsByRank> {
               totalPicks += odNum(hero, `${i}_pick`);
               totalWins += odNum(hero, `${i}_win`);
             }
-            const winrateNum = totalPicks > 0 ? parseFloat(((totalWins / totalPicks) * 100).toFixed(1)) : 0;
-            return {
-              id: hero.id,
-              name: hero.localized_name || 'Unknown',
-              winrate: `${winrateNum}%`,
-              winrateNum,
-              pickrate: totalPicks,
-              roles: hero.roles || [],
-              image: getHeroImageUrl(hero.img || ''),
-              primary_attr: hero.primary_attr,
-              attack_type: hero.attack_type,
-            };
+            return mapHeroAggregate(hero, totalPicks, totalWins);
           })
           .sort((a, b) => b.pickrate - a.pickrate)
           .slice(0, limit);
@@ -357,18 +363,7 @@ export async function getHeroStatsByRank(limit = 8): Promise<HeroStatsByRank> {
               picks = hero.pro_pick ?? 0;
               wins = hero.pro_win ?? 0;
             }
-            const winrateNum = picks > 0 ? parseFloat(((wins / picks) * 100).toFixed(1)) : 0;
-            return {
-              id: hero.id,
-              name: hero.localized_name || 'Unknown',
-              winrate: `${winrateNum}%`,
-              winrateNum,
-              pickrate: picks,
-              roles: hero.roles || [],
-              image: getHeroImageUrl(hero.img || ''),
-              primary_attr: hero.primary_attr,
-              attack_type: hero.attack_type,
-            };
+            return mapHeroAggregate(hero, picks, wins);
           })
           .sort((a, b) => b.pickrate - a.pickrate)
           .slice(0, limit);
