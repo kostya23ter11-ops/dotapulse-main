@@ -18,7 +18,7 @@ const NewsSection = () => {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const CARD_WIDTH = 340;
+  const CARD_WIDTH = 344;
   const { t } = useLocale();
 
   const openModal = (item: NewsItem) => {
@@ -98,6 +98,18 @@ const NewsSection = () => {
 
   useEffect(() => {
     loadNews();
+  }, []);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedNews) closeModal();
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [selectedNews]);
+
+  useEffect(() => {
+    return () => { document.body.style.overflow = ''; };
   }, []);
 
   useEffect(() => {
@@ -191,7 +203,7 @@ const NewsSection = () => {
                       alt={item.title}
                       fill
                       className={styles.newsImage}
-                      onError={(e) => { (e.target as HTMLImageElement).src = FALLBACK_IMAGE; }}
+                      onError={(e) => { const img = e.target as HTMLImageElement; if (img.src !== FALLBACK_IMAGE) img.src = FALLBACK_IMAGE; }}
                     />
                     <span className={styles.category}>{item.category}</span>
                   </div>
@@ -261,7 +273,7 @@ const NewsSection = () => {
                 alt={selectedNews.title}
                 fill
                 className={styles.modalImage}
-                onError={(e) => { (e.target as HTMLImageElement).src = FALLBACK_IMAGE; }}
+                onError={(e) => { const img = e.target as HTMLImageElement; if (img.src !== FALLBACK_IMAGE) img.src = FALLBACK_IMAGE; }}
               />
               <span className={styles.modalCategory}>{selectedNews.category}</span>
             </div>
@@ -300,12 +312,18 @@ const NewsSection = () => {
   );
 };
 
+function getRelativeDate(daysAgo: number): string {
+  const d = new Date();
+  d.setDate(d.getDate() - daysAgo);
+  return d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 function getStaticFallback(): NewsItem[] {
   return [
     {
       id: 1,
       title: 'Патч 7.41d: Новые механики и баланс',
-      date: '4 июня 2026',
+      date: getRelativeDate(1),
       image: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/earthshaker.png',
       category: 'Патч',
       excerpt: 'Вышел крупный геймплейный патч 7.41d с изменениями в карте и героях.',
@@ -315,7 +333,7 @@ function getStaticFallback(): NewsItem[] {
     {
       id: 2,
       title: 'The International 2026: Квалификации в разгаре',
-      date: '2 июня 2026',
+      date: getRelativeDate(3),
       image: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png',
       category: 'Турниры',
       excerpt: 'Открытые и региональные квалификации на главный турнир года идут полным ходом.',
@@ -325,7 +343,7 @@ function getStaticFallback(): NewsItem[] {
     {
       id: 3,
       title: 'Обновления в экономике и ролях',
-      date: '1 июня 2026',
+      date: getRelativeDate(5),
       image: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png',
       category: 'Герои',
       excerpt: 'Саппорты получили больше золота и контроля.',
@@ -335,7 +353,7 @@ function getStaticFallback(): NewsItem[] {
     {
       id: 4,
       title: 'Новая коллекция скинов и арокан',
-      date: '30 мая 2026',
+      date: getRelativeDate(7),
       image: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/invoker.png',
       category: 'Обновление',
       excerpt: 'Valve выпустила новые Immortal и Arcana.',

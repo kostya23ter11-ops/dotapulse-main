@@ -346,9 +346,16 @@ async function fetchAndProcessNews(limit: number): Promise<NewsItem[]> {
       }
     }
 
-    // Фильтруем совсем старые и дубликаты, гарантируем наличие картинки
+    // Фильтруем дубликаты и пустые, гарантируем наличие картинки
+    const seen = new Set<string>();
     return processed
-      .filter(item => item.title && item.excerpt)
+      .filter(item => {
+        if (!item.title || !item.excerpt) return false;
+        const key = item.title.toLowerCase().trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      })
       .map(item => ({
         ...item,
         image: item.image || HERO_IMAGES.default,
@@ -377,12 +384,18 @@ export async function getLatestDotaNews(limit = 6, forceRefresh = false): Promis
 /**
  * Фоллбэк, если Steam API недоступен
  */
+function getRelativeDate(daysAgo: number): string {
+  const d = new Date();
+  d.setDate(d.getDate() - daysAgo);
+  return d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 function getFallbackNews(): NewsItem[] {
   return [
     {
       id: 1,
       title: 'Патч 7.41d: Новые механики и баланс',
-      date: '4 июня 2026',
+      date: getRelativeDate(1),
       image: HERO_IMAGES.patch,
       category: 'Патч',
       excerpt: 'Вышел крупный геймплейный патч 7.41d с изменениями в карте и героях.',
@@ -392,7 +405,7 @@ function getFallbackNews(): NewsItem[] {
     {
       id: 2,
       title: 'The International 2026: Квалификации в разгаре',
-      date: '2 июня 2026',
+      date: getRelativeDate(3),
       image: HERO_IMAGES.tournament,
       category: 'Турниры',
       excerpt: 'Открытые и региональные квалификации на главный турнир года идут полным ходом.',
@@ -402,7 +415,7 @@ function getFallbackNews(): NewsItem[] {
     {
       id: 3,
       title: 'Обновления баланса и ролей',
-      date: '1 июня 2026',
+      date: getRelativeDate(5),
       image: HERO_IMAGES.hero,
       category: 'Герои',
       excerpt: 'Саппорты получили больше инструментов для контроля и золота.',
@@ -412,7 +425,7 @@ function getFallbackNews(): NewsItem[] {
     {
       id: 4,
       title: 'Новая коллекция скинов и арокан',
-      date: '30 мая 2026',
+      date: getRelativeDate(7),
       image: HERO_IMAGES.update,
       category: 'Обновление',
       excerpt: 'Valve выпустила новые Immortal и Arcana для популярных героев.',
