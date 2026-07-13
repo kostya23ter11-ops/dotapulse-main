@@ -125,6 +125,13 @@ function cleanText(html: string, maxLength = 300) {
 }
 
 /**
+ * Проверяет содержит ли текст кириллицу (русский язык)
+ */
+function hasCyrillic(text: string): boolean {
+  return /[а-яА-ЯёЁ]/.test(text);
+}
+
+/**
  * Использует ИИ (Groq / OpenAI) для генерации красивого контента на русском
  * Если ключа нет — возвращает базовую версию
  */
@@ -165,24 +172,47 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
   }
 
   // === ИИ-часть ===
-  const systemPrompt = `Ты — умный редактор новостей Dota 2. 
-Твоя задача — превратить сырую новость от Valve в красивый, информативный и дружелюбный пост на русском языке для сайта Dota Pulse.
+  const systemPrompt = `Ты — редактор новостей Dota 2 для русскоязычного сайта.
 
-Верни строго JSON в формате:
+## ГЛАВНОЕ ПРАВИЛО: ВСЯ ВЫХОДНАЯ ИНФОРМАЦИЯ СТРОГО НА РУССКОМ ЯЗЫКЕ
+- title — ТОЛЬКО на русском
+- excerpt — ТОЛЬКО на русском
+- fullContent — ТОЛЬКО на русском
+- Никакого английского в ответе, кроме image_search_query
+
+## Перевод игровых терминов
+- hero names: Pudge = Пудж, Invoker = Инвокер, Crystal Maiden = Кристалл Мейден, Shadow Fiend = Шедоу Фиенд, Anti-Mage = Анти-Мэдж
+- patch = патч, update = обновление, balance = баланс
+- carry = керри, support = саппорт, mid = мид, offlane = оффлейн
+- winrate = винрейт, pickrate = пикрейт, meta = мета
+- The International = The International (оставляй как есть)
+- tournament = турнир, qualifier = квалификация
+- item names: Battle Fury = Бэттл Фьюри, Black King Bar = Блэк Кинг Бар, Blink Dagger = Блинк Дэйгар
+- ability = способность, talent = талант, Aghanim's Scepter = Аганим
+
+## Формат ответа — строго JSON:
 {
-  "title": "Короткий привлекательный заголовок (до 70 символов)",
-  "excerpt": "Краткое описание 1-2 предложения (до 160 символов)",
-  "fullContent": "Полное описание новости 4-8 предложений. Можно использовать маркированные списки если уместно. На русском.",
-  "image_search_query": "5-8 английских ключевых слов через запятую для поиска высококачественного релевантного фото или арта с интернета, например 'dota 2 7.37 patch notes fantasy illustration epic battle' или 'dota 2 international 2026 esports tournament crowd arena stage lights'. Сделай максимально описательным и по теме новости, чтобы фото было подходящим и красивым. Добавь 'high quality' или 'digital art' если уместно."
+  "title": "Короткий привлекательный заголовок на русском (до 70 символов)",
+  "excerpt": "Краткое описание 1-2 предложения на русском (до 160 символов)",
+  "fullContent": "Полное описание новости 4-8 предложений на русском. Можно использовать маркированные списки если уместно.",
+  "image_search_query": "5-8 английских ключевых слов через запятую для поиска релевантного фото, например 'dota 2 patch notes fantasy illustration epic battle' или 'dota 2 international 2026 esports tournament crowd arena'. Добавь 'high quality' если уместно."
 }
 
-Сохраняй ключевые факты. Делай язык живым и экспертным. image_search_query должен быть на английском для хороших результатов поиска фото.`;
+## Стиль
+- Пиши как экспертный геймерский журнал, а не как переводчик
+- Сохраняй ключевые факты и цифры
+- Делай язык живым и дружелюбным
+- image_search_query — только на английском (для поиска картинок)`;
 
-  const userPrompt = `Сырая новость:
+  const userPrompt = `Переведи эту новость на русский язык и оформи для сайта.
+
+Исходная новость (может быть на английском):
 Заголовок: ${rawTitle}
 Содержание: ${contents.substring(0, 1200)}
-Категория (примерная): ${category}
-Источник: ${feedlabel || 'Valve'}`;
+Категория: ${category}
+Источник: ${feedlabel || 'Valve'}
+
+ВАЖНО: Ответ должен быть ТОЛЬКО на русском языке. Переведи все термины и названия.`;
 
   try {
     const baseUrl = isGroq 
@@ -235,6 +265,10 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
           const retryData = await retryRes.json();
           const retryAiContent = JSON.parse(retryData.choices?.[0]?.message?.content || '{}');
 
+          const retryTitle = retryAiContent.title && hasCyrillic(retryAiContent.title) ? retryAiContent.title : null;
+          const retryExcerpt = retryAiContent.excerpt && hasCyrillic(retryAiContent.excerpt) ? retryAiContent.excerpt : null;
+          const retryFull = retryAiContent.fullContent && hasCyrillic(retryAiContent.fullContent) ? retryAiContent.fullContent : null;
+
           let retryImage = image;
           if (!retryImage && retryAiContent.image_search_query) {
             const keywords = (retryAiContent.image_search_query + ' dota2 game').replace(/,/g, ' ').trim();
@@ -246,7 +280,7 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
 
           return {
             id: rawItem.gid || Date.now(),
-            title: retryAiContent.title || rawTitle,
+            title: retryTitle || rawTitle,
             date: new Date(date * 1000).toLocaleDateString('ru-RU', { 
               day: 'numeric', 
               month: 'long', 
@@ -254,8 +288,8 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
             }),
             image: retryImage,
             category,
-            excerpt: retryAiContent.excerpt || baseExcerpt,
-            fullContent: retryAiContent.fullContent || baseFull,
+            excerpt: retryExcerpt || baseExcerpt,
+            fullContent: retryFull || baseFull,
             externalLink: rawItem.url || 'https://www.dota2.com/news',
           };
         }
@@ -267,6 +301,11 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
     const data = await response.json();
     const aiContent = JSON.parse(data.choices?.[0]?.message?.content || '{}');
 
+    // Валидация: если AI вернул английский заголовок — используем базовую версию
+    const aiTitle = aiContent.title && hasCyrillic(aiContent.title) ? aiContent.title : null;
+    const aiExcerpt = aiContent.excerpt && hasCyrillic(aiContent.excerpt) ? aiContent.excerpt : null;
+    const aiFull = aiContent.fullContent && hasCyrillic(aiContent.fullContent) ? aiContent.fullContent : null;
+
     if (!image && aiContent.image_search_query) {
       const keywords = (aiContent.image_search_query + ' dota2 game').replace(/,/g, ' ').trim();
       image = `https://loremflickr.com/800/450/${encodeURIComponent(keywords)}`;
@@ -277,7 +316,7 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
 
     return {
       id: rawItem.gid || Date.now(),
-      title: aiContent.title || rawTitle,
+      title: aiTitle || rawTitle,
       date: new Date(date * 1000).toLocaleDateString('ru-RU', { 
         day: 'numeric', 
         month: 'long', 
@@ -285,8 +324,8 @@ async function enrichWithAI(rawItem: SteamNewsRawItem): Promise<NewsItem> {
       }),
       image,
       category,
-      excerpt: aiContent.excerpt || baseExcerpt,
-      fullContent: aiContent.fullContent || baseFull,
+      excerpt: aiExcerpt || baseExcerpt,
+      fullContent: aiFull || baseFull,
       externalLink: rawItem.url || 'https://www.dota2.com/news',
     };
   } catch {
